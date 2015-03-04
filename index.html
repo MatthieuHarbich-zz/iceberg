@@ -14,26 +14,26 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
         <style>
-			canvas{
-				width:1920px;
-				height:1000px;
-			}
+			*{
+                padding:0;
+                margin:0;
+            }
+
+            body{
+                background-color: #D1D3D4;
+            }
         </style>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h1>Iceberg</h1>
+        
 
         <ul id="scene">
-            <li class="layer" data-depth="0.3"><canvas><svg><rect x="-0.5" y="0.5" fill="#A9EBFF" stroke="#000000" stroke-miterlimit="10" width="1280" height="800"/></svg></canvas></li>
-            <li class="layer" data-depth="0.5"><canvas><svg><path fill="#A8A8A8" stroke="#000000" stroke-miterlimit="10" d="M568.167,171.389L488.111,252.5H456l-13.444,59.056
-		c0,0,8.889,28.889,11.111,33.333c2.222,4.444-7.778,80-11.111,86.667c-3.333,6.667,50,130,54.444,136.667
-		s116.667,73.333,116.667,73.333l50-41.111l8.889-33.333c0,0,71.111,8.889,75.556,5.556C752.556,569.333,750.333,476,757,446
-		s22.222-106.667,23.333-111.111c1.111-4.444-36.667-96.667-36.667-96.667s-38.889-76.667-42.222-84.444
-		c-3.333-7.778-96.667-61.111-96.667-61.111L598.111,116L568.167,171.389z"/></svg></canvas></li>
-            <li class="layer" data-depth="1"><canvas><svg><rect x="-0.5" y="409.5" opacity="0.5" fill="#3070CE" stroke="#000000" stroke-miterlimit="10" width="1280" height="391"/></svg></canvas></li>
+            <li class="layer" data-depth="0.3"></li>
+            <li class="layer" data-depth="0.5"><img src="layers/corpo.png" alt=""></li>
+            <li class="layer" data-depth="1"><img src="layers/layer3.png" alt=""></li>
         </ul>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
