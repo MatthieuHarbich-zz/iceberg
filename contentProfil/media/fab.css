@@ -82,3 +82,49 @@ nav {
 	opacity: 0;
 	filter: alpha(opacity=0);
 	}
+
+
+
+/**SKILLS**/
+.skills{
+	position: relative;
+	clear: both;
+}
+
+.skillsSet{
+	padding-top: 5px;
+
+}
+.skills-1{
+	float: left;
+	padding-top: 3px;
+	width: 50px;
+	height: 5px;
+	background-color: red;
+	margin-left: 5px;
+}
+
+.skills-2{
+	float: left;
+	padding-top: 3px;
+	width: 20px;
+	height: 5px;
+	background-color: red;
+	margin-left: 5px;
+}
+
+.skillsName{
+	float: left;
+}
+
+dl {
+ width:100%;
+ overflow:hidden;
+}
+dt {
+ float:left;
+ width:30%; /* adjust the width; make sure the total of both is 100% */
+}
+dd {
+ float:left;
+ width:70%; /* adjust the width; make sure the total of both is 100% */
