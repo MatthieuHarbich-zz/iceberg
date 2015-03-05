@@ -16,24 +16,29 @@ var skills = {"skills":[
     {"danse":"50"}
 ]};
 
-
+/**
 console.log(Object.keys(skills.skills[0]));
 
 $(".skills-1").width(skills.skills[0].photo);
 $(".skillsName").append(Object.keys(skills.skills[0])[0]);
-
+**/
 
 
 
 var data = {
     employees: [
-    {   firstName: "4",
-        lastName: "Coenraets"},
-    {   firstName: "John",
-        lastName: "Smith"}
+    {   photo: "4",
+        video: "5"},
+         {   photo: "12",
+        video: "5"}
     ]};
-var template = "Employees:<div>{{#employees}}" +
-                            "<div>{{firstName}} {{lastName}}</div>" +
-                            "{{/employees}}</div>";
+
+ 
+var template = "{{#employees}}<div class=\"skills\">" +
+							"<div class=\"skillsName\"><p>{{photo}}</p></div>"+
+                            "<div class=\"skills-1\" attr=\"{{photo}}\"></div>" +
+                            "</div>{{/employees}}";
+
+
 var html = Mustache.to_html(template, data);
 $('#sampleArea').html(html);
