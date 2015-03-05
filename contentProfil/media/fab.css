@@ -50,3 +50,17 @@ nav {
 
 }
 
+.close {
+  color: #ffffff;
+  background: #3498db;
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+  border: none;
+}
+
+
+
+.close:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
