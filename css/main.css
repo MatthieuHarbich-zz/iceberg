@@ -56,7 +56,134 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* MAtthieu csss*/
 
+*{
+                padding:0;
+                margin:0;
+                
+
+            }
+
+           /* #scene{
+                height:200px;
+            }*/
+
+            @-webkit-keyframes icebergMove {
+                  from {
+                    -webkit-transform: rotate(0deg);
+                  }
+                  to { 
+                    -webkit-transform: rotate(10deg);
+                  }
+                }
+
+                 @-moz-keyframes swing{
+                        0%{-moz-transform:rotate(-3deg)}
+                        50%{-moz-transform:rotate(3deg)}
+                        100%{-moz-transform:rotate(-3deg)}
+                    }
+                    @-webkit-keyframes swing{
+                        0%{-webkit-transform:rotate(-3deg)}
+                        50%{-webkit-transform:rotate(3deg)}
+                        100%{-webkit-transform:rotate(-3deg)}
+                    }
+
+                    @-moz-keyframes wave{
+                        0%{-moz-transform:translate(-40px,10px)}
+                        50%{-moz-transform:translate(40px,-10px)}
+                        100%{-moz-transform:translate(-40px,10px)}
+                    }
+                    @-webkit-keyframes wave{
+                        0%{-webkit-transform:translate(-40px,10px)}
+                        50%{-webkit-transform:translate(40px,-10px)}
+                        100%{-webkit-transform:translate(-40px,10px)}
+                    }
+
+                     @-moz-keyframes wavei{
+                        0%{-moz-transform:translate(40px,-10px)}
+                        50%{-moz-transform:translate(-40px,10px)}
+                        100%{-moz-transform:translate(40px,-10px)}
+                    }
+                    @-webkit-keyframes wavei{
+                        0%{-webkit-transform:translate(40px,-10px)}
+                        50%{-webkit-transform:translate(-40px,10px)}
+                        100%{-webkit-transform:translate(40px,-10px)}
+                    }
+
+                    @-moz-keyframes waveii{
+                        0%{-moz-transform:translate(20px,-10px)}
+                        50%{-moz-transform:translate(-20px,10px)}
+                        100%{-moz-transform:translate(20px,-10px)}
+                    }
+                    @-webkit-keyframes waveii{
+                        0%{-webkit-transform:translate(20px,-10px)}
+                        50%{-webkit-transform:translate(-20px,10px)}
+                        100%{-webkit-transform:translate(20px,-10px)}
+                    }
+
+            body{
+                background-color: #c9eaf5;
+                overflow-x:hidden;
+            }
+
+            #iceberg img{
+                width:580px;
+                position:relative;
+                top:200px;
+                left:300px;
+                -webkit-animation-name:             swing ; 
+                -webkit-animation-duration:         10s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-transition-timing-function: linear;
+            }
+
+           /* -moz-animation: 3s ease 0s normal none infinite swing;
+                -moz-transform-origin: center top;
+                -webkit-animation:swing 3s infinite ease-in-out;
+                -webkit-transform-origin:top;
+            }*/
+           
+
+            #water1 img{
+                /*width:130%;*/
+                position:relative;
+                top:500px;
+                left:-140px;
+                -webkit-animation-name:             wavei ; 
+                -webkit-animation-duration:         5s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-transition-timing-function: linear;
+            }
+             #water2 img{
+                
+                position:relative;
+                top:500px;
+                left:-140px;
+                -webkit-animation-name:             waveii ; 
+                -webkit-animation-duration:         7s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-transition-timing-function: linear;
+            }
+             #water3 img{
+
+                position:relative;
+                top:500px;
+                left:-500px;
+                -webkit-animation-name:             wave ; 
+                -webkit-animation-duration:        5s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-transition-timing-function: linear;
+            }
+            
+            #grad{
+                background: url('layers/gradient.png') bottom left repeat-x;
+                
+                z-index:100;
+                
+            }
+            
+            }
 
 
 

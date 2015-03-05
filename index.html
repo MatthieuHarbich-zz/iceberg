@@ -11,47 +11,11 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
+
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-        <style>
-			*{
-                padding:0;
-                margin:0;
-
-
-            }
-
-            body{
-                background-color: #a5d9eb;
-                overflow-x:hidden;
-            }
-
-            #iceberg img{
-                width:580px;
-                position:relative;
-                top:200px;
-                left:300px;
-            }
-
-            #water1 img{
-                /*width:130%;*/
-                position:relative;
-                top:-900px;
-                left:-140px;
-            }
-             #water2 img{
-                
-                position:relative;
-                top:-800px;
-                left:-500px;
-            }
-             #water3 img{
-
-                position:relative;
-                top:-1200px;
-                left:-500px;
-            }
-        </style>
+        
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -61,10 +25,12 @@
 
         <ul id="scene">
             <li class="layer" id="water3" data-depth="0.4"><img src="layers/eau3.png" alt=""></li>
-            <!-- <li class="layer" id="water2" data-depth="0.2"><img src="layers/eau2.png" alt=""></li> -->
+            <li class="layer" id="water2" data-depth="0.2"><img src="layers/eau2.png" alt=""></li>
             <li class="layer" id="iceberg" data-depth="0.5"><img src="layers/iceberg.png" alt=""></li>
             <li class="layer" id="water1" data-depth="0.7"><img src="layers/eau1.png" alt=""></li>
         </ul>
+
+        <div id="grad"></div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
