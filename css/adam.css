@@ -1,0 +1,9 @@
+svg{
+                position:relative;
+                top:20px;
+                left:30px;
+                -webkit-animation-name:             swing ; 
+                -webkit-animation-duration:         10s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-transition-timing-function: linear;
+            }
