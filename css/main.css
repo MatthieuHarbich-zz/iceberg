@@ -137,7 +137,13 @@ textarea {
                 -webkit-animation-iteration-count:  infinite;
                 -webkit-transition-timing-function: linear;
             }
-
+            #holder{
+               
+                -webkit-animation-name:             swing ; 
+                -webkit-animation-duration:         10s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-transition-timing-function: linear;
+            }
            /* -moz-animation: 3s ease 0s normal none infinite swing;
                 -moz-transform-origin: center top;
                 -webkit-animation:swing 3s infinite ease-in-out;
