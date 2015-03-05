@@ -17,22 +17,39 @@
 			*{
                 padding:0;
                 margin:0;
+
+
             }
 
             body{
-                background-color: #D1D3D4;
+                background-color: #a5d9eb;
+                overflow-x:hidden;
             }
 
             #iceberg img{
-                width:900px;
+                width:580px;
                 position:relative;
                 top:200px;
                 left:300px;
             }
 
-            #water img{
+            #water1 img{
+                /*width:130%;*/
                 position:relative;
-                left:-200px;
+                top:-900px;
+                left:-140px;
+            }
+             #water2 img{
+                
+                position:relative;
+                top:-800px;
+                left:-500px;
+            }
+             #water3 img{
+
+                position:relative;
+                top:-1200px;
+                left:-500px;
             }
         </style>
     </head>
@@ -43,9 +60,10 @@
         
 
         <ul id="scene">
-            <li class="layer" data-depth="0.3"></li>
-            <li class="layer" id="iceberg" data-depth="0.5"><img src="layers/corpo.png" alt=""></li>
-            <li class="layer" id="water" data-depth="1"><img src="layers/layer3.png" alt=""></li>
+            <li class="layer" id="water3" data-depth="0.4"><img src="layers/eau3.png" alt=""></li>
+            <!-- <li class="layer" id="water2" data-depth="0.2"><img src="layers/eau2.png" alt=""></li> -->
+            <li class="layer" id="iceberg" data-depth="0.5"><img src="layers/iceberg.png" alt=""></li>
+            <li class="layer" id="water1" data-depth="0.7"><img src="layers/eau1.png" alt=""></li>
         </ul>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
