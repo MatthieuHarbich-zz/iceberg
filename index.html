@@ -22,6 +22,18 @@
             body{
                 background-color: #D1D3D4;
             }
+
+            #iceberg img{
+                width:900px;
+                position:relative;
+                top:200px;
+                left:300px;
+            }
+
+            #water img{
+                position:relative;
+                left:-200px;
+            }
         </style>
     </head>
     <body>
@@ -32,8 +44,8 @@
 
         <ul id="scene">
             <li class="layer" data-depth="0.3"></li>
-            <li class="layer" data-depth="0.5"><img src="layers/corpo.png" alt=""></li>
-            <li class="layer" data-depth="1"><img src="layers/layer3.png" alt=""></li>
+            <li class="layer" id="iceberg" data-depth="0.5"><img src="layers/corpo.png" alt=""></li>
+            <li class="layer" id="water" data-depth="1"><img src="layers/layer3.png" alt=""></li>
         </ul>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
