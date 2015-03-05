@@ -7,3 +7,40 @@ svg{
                 -webkit-animation-iteration-count:  infinite;
                 -webkit-transition-timing-function: linear;
             }
+
+            svg path {
+              z-index: -2;
+              stroke-dasharray: 1300;
+              animation: dash 1s linear ;
+              -webkit-animation: dash 1s linear;
+            }
+            @keyframes dash {
+              from {
+                stroke-dashoffset: 1300;
+              }
+              to {
+                stroke-dashoffset: 220;
+              }
+            }
+            @-webkit-keyframes dash {
+              from {
+                stroke-dashoffset: 1300;
+              }
+              to {
+                stroke-dashoffset: 220;
+              }
+            }
+
+            .tooltip{
+                width: 200px;
+                height: 30px;
+                background-color: gray;
+                color: yellow;
+                border-style: solid 3px;
+                text-align: center;
+                z-index: 2;
+            }
+            .tooltip p{
+                background-color: gray;
+                z-index: 2;
+            }

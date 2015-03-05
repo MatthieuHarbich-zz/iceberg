@@ -37,7 +37,7 @@ $(function(){
         description.css("right", allPoints[i].x+200+'px');
         
         //description.appendTo('#descriptions');
-        layer.appendTo('#scene');
+        layer.appendTo('body');
     };
     
 
