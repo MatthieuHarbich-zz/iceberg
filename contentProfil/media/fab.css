@@ -1,0 +1,52 @@
+/* Main Nav */
+
+nav {
+	height: 50px;
+	background-color: black;
+	width: 100%;
+}
+
+.btn {
+	color: white;
+	padding: 10px;
+}
+
+
+#profilContent{
+	width: 100%;
+	position: absolute;
+	z-index: 100;
+}
+
+.content {
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 960px;
+}
+
+.col-1 {
+	width: 30%;
+	padding: 5px;
+	float: left;
+	margin-right: 10px;
+}
+
+.col-1:last-child{
+	margin-right: 0px;
+
+}
+
+.bottomClose{
+	clear: both;
+	position: relative;
+	z-index: 999;
+	float: left;
+	width: 100%;
+	color: red;
+
+	text-align: center;
+	margin-bottom: -10px;
+
+}
+
