@@ -64,3 +64,21 @@ nav {
   background: #3cb0fd;
   text-decoration: none;
 }
+
+
+/** IMAGE RONDE**/
+.circular {
+	text-align: center;
+	border: solid 2px;
+	width: 100px;
+	height: 100px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://colouringbook.org/Holidays/Xmas/KITTY/kitty_icon_christmas_xmas_stuffed_animal_coloring_book_colouring-100px.png) no-repeat;
+	}
+
+.circular img {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	}
