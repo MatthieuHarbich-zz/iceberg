@@ -25,20 +25,54 @@ $(".skillsName").append(Object.keys(skills.skills[0])[0]);
 
 
 
-var data = {
-    employees: [
-    {   photo: "4",
-        video: "5"},
-         {   photo: "12",
-        video: "5"}
-    ]};
 
- 
-var template = "{{#employees}}<div class=\"skills\">" +
-							"<div class=\"skillsName\"><p>{{photo}}</p></div>"+
-                            "<div class=\"skills-1\" attr=\"{{photo}}\"></div>" +
-                            "</div>{{/employees}}";
+var per_1 = {
+		name: "John Smith",
+		age: 26,
+		shortDesc: "Curabitur consectetur, libero a consequat eleifend",
+		avatare: "avt_url",
+		profilPict: "pp_url",
+		skills: [
+				{ 
+					skillsName: "Photo"	,
+					value: "34" }, 
+				{ 
+					skillsName: "Video",	
+					value: "56" }, 
+				{ 
+					skillsName: "Code",	
+					value: "40" }, 
+					{ 
+					skillsName: "Management",	
+					value: "12" }, 
+				]
+		
+};
 
 
-var html = Mustache.to_html(template, data);
+
+//console.log(per_1.skills[0]);
+//console.log(per_1.skills[0].skillsName);
+
+var template_Skills = 		"{{#skills}}<div class=\"skills\">" +
+							"<div class=\"skillsName\"><p>{{skillsName}}</p></div>"+
+							"<div class=\"skillSet\">" +
+                            "<div class=\"skill\" style=\"width:{{value}}px\"></div>" +
+                            "</div>" +
+                            "</div>{{/skills}}";
+
+var html = Mustache.to_html(template_Skills, per_1);
 $('#sampleArea').html(html);
+
+
+
+var template_shortDesc = 		"<div class=\"shortDesc\">{{shortDesc}}</div>";
+
+var html = Mustache.to_html(template_shortDesc, per_1);
+$('#shortDesc').html(html);
+
+
+
+
+
+
