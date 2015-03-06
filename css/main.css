@@ -177,7 +177,7 @@ textarea {
             }
             
             #grad{
-                background: url('layers/gradient.png') bottom left repeat-x;
+               /* background: url('layers/gradient.png') bottom left repeat-x; */
                 
                 z-index:100;
                 

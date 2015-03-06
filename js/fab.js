@@ -4,28 +4,34 @@ $( ".close" ).click(function() {
 
 
 
+
+
+
+
+
+
 $( ".open" ).click(function() {
-	$("#profilContent").show();
+  $("#profilContent").show();
+
+  $.getJSON('data.json', function(json) {
+  		console.log("yeah");
+  });
+
+
+
 });
 
 
 
-var skills = {"skills":[
-    {"photo":"50"}, 
-    {"video":"50"},
-    {"danse":"50"}
-]};
-
-/**
-console.log(Object.keys(skills.skills[0]));
-
-$(".skills-1").width(skills.skills[0].photo);
-$(".skillsName").append(Object.keys(skills.skills[0])[0]);
-**/
 
 
 
 
+
+
+
+  
+/*
 var per_1 = {
 		name: "John Smith",
 		age: 26,
@@ -48,11 +54,16 @@ var per_1 = {
 				]
 		
 };
+*/
 
 
 
 //console.log(per_1.skills[0]);
 //console.log(per_1.skills[0].skillsName);
+
+/** TEMPLATE SKILLS + NAME **/
+function toTemplate(data) {
+	var per_1 = this.data;
 
 var template_Skills = 		"{{#skills}}<div class=\"skills\">" +
 							"<div class=\"skillsName\"><p>{{skillsName}}</p></div>"+
@@ -64,7 +75,7 @@ var template_Skills = 		"{{#skills}}<div class=\"skills\">" +
 var html = Mustache.to_html(template_Skills, per_1);
 $('#sampleArea').html(html);
 
-
+/** TEMPLATE shortDesc **/
 
 var template_shortDesc = 		"<div class=\"shortDesc\">{{shortDesc}}</div>";
 
@@ -73,6 +84,6 @@ $('#shortDesc').html(html);
 
 
 
-
+};
 
 
