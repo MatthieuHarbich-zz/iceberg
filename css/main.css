@@ -177,17 +177,71 @@ textarea {
             }
             
             #grad{
-                background: url('layers/gradient.png') bottom left repeat-x;
+                background: url('../layers/gradient.png') bottom left repeat-x;
                 
                 z-index:100;
                 
             }
             
+            #profils{
+                display: block;
+                width:100%;
+                /*height:260px;*/
+                /*background-color: red;*/
+                position:fixed;
+                top:20px;
+                opacity: 0.75;
+                z-index:101;
+            }
+
+            #profils li{
+                width:8.7%;
+                display: block;
+                position:relative;
+            }
+
+            #profils .profil{
+                width:6%;
+                margin-left:2.7%;
+                position:relative;
+                left:0;
+
+            }
+
+            .eye{
+                width:6%;
+                position:relative;
+                display:both;
+                left:-6%;
+                
+
             }
 
 
+            
+            #profils li{
+                display: inline;
+                /*margin-left: 0.1%;*/
+            }
+            
+            #bgStart{
+                background-color: rgba(31,59,77,0.7);
+                width:100%;
+                height:2000px;
+                position:fixed;
+                top:0;
+                left:0;
+                z-index:100;
+            }
 
-
+            
+            #bgStart img{
+                position:fixed;
+                top:20px;
+                width:96%;
+                left:2%;
+            }
+            
 
 
 
