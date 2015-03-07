@@ -38,14 +38,11 @@ $(function(){
 		console.log("fadeOUt");
 	})
 
-	$('#profils .profil').on('mouseenter', function(){
-		
-		$(this).siblings('.eye').removeClass("hidde");
-		$(this).on("mouseleave", function(){
-				console.log("yep");
-		})
-	})
-
+	$("#profils li").hover(function() {
+		$(this).children('.eye').toggleClass("hidden");
+			}, function() {
+		$(this).children('.eye').toggleClass("hidden");
+	});
 
 
 });
