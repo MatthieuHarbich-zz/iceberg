@@ -22,5 +22,27 @@ $(function(){
 	})
 
 
+	$(window).on('scroll', function() {
+	   var st = $(this).scrollTop();
+	   
+	   if (st < 280) {
+	   		$("#profils").css({ 'opacity' : (0.75 - st/500) });
+	   } else{
+	   		$("#profils").css({ 'opacity' : (0.75 - 280/500) });
+	   };
+	   
+	});
+
+	$(window).on('click', function(){
+		$('#bgStart').fadeOut();
+		console.log("fadeOUt");
+	})
+
+	$("#profils li").hover(function() {
+		$(this).children('.eye').toggleClass("hidden");
+			}, function() {
+		$(this).children('.eye').toggleClass("hidden");
+	});
+
 
 });

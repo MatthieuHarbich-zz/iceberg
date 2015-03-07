@@ -95,6 +95,7 @@ textarea {
                     }
 
                     @-moz-keyframes wave{
+<<<<<<< HEAD
                         0%{-moz-transform:translate(-40px,10px) -moz-transform:translateZ(0)}
                         50%{-moz-transform:translate(40px,-10px) -moz-transform:translateZ(0)}
                         100%{-moz-transform:translate(-40px,10px) -moz-transform:translateZ(0)}
@@ -125,6 +126,38 @@ textarea {
                         0%{-webkit-transform:translate(20px,-10px) -webkit-transform:translateZ}
                         50%{-webkit-transform:translate(-20px,10px) -webkit-transform:translateZ(0)}
                         100%{-webkit-transform:translate(20px,-10px) -webkit-transform:translateZ(0)}
+=======
+                        0%{-moz-transform:translate3d(-40px,10px,0)}
+                        50%{-moz-transform:translate3d(40px,-10px,0)}
+                        100%{-moz-transform:translate3d(-40px,10px,0)}
+                    }
+                    @-webkit-keyframes wave{
+                        0%{-webkit-transform:translate3d(-40px,10px,0)}
+                        50%{-webkit-transform:translate3d(40px,-10px,0)}
+                        100%{-webkit-transform:translate3d(-40px,10px,0)}
+                    }
+
+                     @-moz-keyframes wavei{
+                        0%{-moz-transform:translate3d(40px,-10px,0)}
+                        50%{-moz-transform:translate3d(-40px,10px,0)}
+                        100%{-moz-transform:translate3d(40px,-10px,0)}
+                    }
+                    @-webkit-keyframes wavei{
+                        0%{-webkit-transform:translate3d(40px,-10px,0)}
+                        50%{-webkit-transform:translate3d(-40px,10px,0)}
+                        100%{-webkit-transform:translate3d(40px,-10px,0)}
+                    }
+
+                    @-moz-keyframes waveii{
+                        0%{-moz-transform:translate3d(5px,-4px,0)}
+                        50%{-moz-transform:translate3d(-5px,4px,0)}
+                        100%{-moz-transform:translate3d(5px,-4px,0)}
+                    }
+                    @-webkit-keyframes waveii{
+                        0%{-webkit-transform:translate3d(5px,-4px,0)}
+                        50%{-webkit-transform:translate3d(-5px,4px,0)}
+                        100%{-webkit-transform:translate3d(5px,-4px,0)}
+>>>>>>> png
                     }
 
             body{
@@ -137,6 +170,7 @@ textarea {
                 position:relative;
                 top:200px;
                 left:300px;
+<<<<<<< HEAD
                 -webkit-animation: icebergMove 10s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
                   -moz-animation: icebergMove 10s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
                   animation: icebergMove 10s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -153,6 +187,12 @@ textarea {
                   -webkit-backface-visibility: hidden;
                   -moz-backface-visibility: hidden;
                   backface-visibility: hidden;
+=======
+                /*-webkit-animation-name:             swing ; 
+                -webkit-animation-duration:         10s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-transition-timing-function: linear;*/
+>>>>>>> png
             }
              
 
@@ -195,11 +235,31 @@ textarea {
             }
             
             #grad{
+<<<<<<< HEAD
                 background: url('../layers/gradient.png') bottom left repeat-x;
-                
-                z-index:100;
+=======
+                height:1000px;
+                width:100%;
+                background: url('../layers/gradient.png') bottom left repeat-x;
+                position:absolute;
+                top:600px;
+                z-index:1053;
+>>>>>>> png
                 
             }
+
+             #gradTop{
+                height:1000px;
+                width:100%;
+                background: url('../layers/gradientTop.png') bottom left repeat-x;
+                position:absolute;
+                top:-200px;
+                
+                z-index:-200;
+                
+            }
+
+
             
             #profils{
                 display: block;
@@ -210,6 +270,7 @@ textarea {
                 top:20px;
                 opacity: 0.75;
                 z-index:101;
+<<<<<<< HEAD
             }
 
             #profils li{
@@ -233,9 +294,24 @@ textarea {
                 left:-6%;
                 
 
+=======
             }
 
+            #profils li{
+                width:8.7%;
+                display: block;
+                position:relative;
+                margin-left:2.7%;
+>>>>>>> png
+            }
 
+            #profils .profil{
+                width:6%;
+                overflow:hidden;
+                /*position:absolute;*/
+                left:0;
+
+<<<<<<< HEAD
             
             #profils li{
                 display: inline;
@@ -260,9 +336,53 @@ textarea {
                 left:2%;
             }
             
+=======
+            }
+
+            .eye{
+                width:100%;
+                position:absolute;
+                left:0;
+>>>>>>> png
+
+            }
 
 
+            
+            #profils li{
+                display: inline;
+                cursor: pointer;
+                /*margin-left: 0.1%;*/
+            }
+            
+            #bgStart{
+                background-color: rgba(31,59,77,0.7);
+                width:100%;
+                height:2000px;
+                position:fixed;
+                top:0;
+                left:0;
+                z-index:100;
+            }
 
+            
+            #bgStart img{
+                position:fixed;
+                top:20px;
+                width:96%;
+                left:2%;
+            }
+            
+
+
+            #footer{
+                height:100px;
+                width:100%;
+                background-color: blue;
+                position:absolute;
+                top: 1570px;
+                z-index:1300;
+            }
 
 
 
