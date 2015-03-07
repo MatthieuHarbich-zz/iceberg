@@ -1,9 +1,10 @@
-svg{
+/*svg{
 
     -webkit-animation-name:             swing ; 
     -webkit-animation-duration:         10s; 
     -webkit-animation-iteration-count:  infinite;
     -webkit-transition-timing-function: linear;
+    transform: translateZ(0);
 }
 
 svg path {
@@ -26,7 +27,7 @@ svg path {
   to {
     stroke-dashoffset: 220;
   }
-}
+}*/
 
 .tooltip{
     width: 200px;
