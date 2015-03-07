@@ -14,7 +14,7 @@ $( ".open" ).click(function() {
   $("#profilContent").show();
 
   $.getJSON('data.json', function(json) {
-  		console.log("yeah");
+  	toTemplate(json);
   });
 
 
@@ -63,7 +63,8 @@ var per_1 = {
 
 /** TEMPLATE SKILLS + NAME **/
 function toTemplate(data) {
-	var per_1 = this.data;
+	
+	console.log(data);
 
 var template_Skills = 		"{{#skills}}<div class=\"skills\">" +
 							"<div class=\"skillsName\"><p>{{skillsName}}</p></div>"+
@@ -72,14 +73,14 @@ var template_Skills = 		"{{#skills}}<div class=\"skills\">" +
                             "</div>" +
                             "</div>{{/skills}}";
 
-var html = Mustache.to_html(template_Skills, per_1);
+var html = Mustache.to_html(template_Skills, data);
 $('#sampleArea').html(html);
 
 /** TEMPLATE shortDesc **/
 
 var template_shortDesc = 		"<div class=\"shortDesc\">{{shortDesc}}</div>";
 
-var html = Mustache.to_html(template_shortDesc, per_1);
+var html = Mustache.to_html(template_shortDesc, data);
 $('#shortDesc').html(html);
 
 
