@@ -27,17 +27,49 @@ svg path {
     stroke-dashoffset: 220;
   }
 }
-
-.tooltip{
-    width: 200px;
-    height: 30px;
-    background-color: gray;
-    color: yellow;
-    border-style: solid 3px;
-    text-align: center;
-    z-index: 2;
+body:hover {
+    transform: scale(1.2); 
+     -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        transition: 2s;
 }
-.tooltip p{
-    background-color: gray;
-    z-index: 2;
+body{
+  { transition: all 2s ease-in-out; }
+}
+
+
+
+.tooltip {
+  left:200px;
+  z-index: 99;
+      position: absolute;
+      width: 99.72727298736572px;
+      height: 59.727272987365723px;
+      line-height: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(113, 157, 171);
+      background: rgb(255, 255, 255);
+      border: 3.63636350631714px solid rgb(255, 255, 255);
+      border-radius: 5px;
+      text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;
+      display: none;
+}
+  
+.tooltip:after {
+   z-index: 99;
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #FFFFFF transparent transparent transparent;
+      top: -20px;
+      left: 50px;
+       -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
 }
