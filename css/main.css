@@ -261,11 +261,11 @@ textarea {
 
 
             #footer{
-                height:100px;
+                height:130px;
                 width:100%;
-                background-color: blue;
+                background-color: rgb(37,63,96);
                 position:absolute;
-                top: 1570px;
+                top: 1530px;
                 z-index:1300;
             }
 
