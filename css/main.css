@@ -132,6 +132,7 @@ textarea {
                 position:relative;
                 top:200px;
                 left:300px;
+                z-index:1;
                 /*-webkit-animation-name:             swing ; 
                 -webkit-animation-duration:         10s; 
                 -webkit-animation-iteration-count:  infinite;
@@ -182,7 +183,7 @@ textarea {
                 background: url('../layers/gradient.png') bottom left repeat-x;
                 position:absolute;
                 top:600px;
-                z-index:1053;
+                z-index:2;
                 
             }
 
@@ -269,6 +270,10 @@ textarea {
                 z-index:1300;
             }
 
+            #holder{
+                z-index: 4;
+            }
+
 
 
 
@@ -337,6 +342,9 @@ textarea {
     *zoom: 1;
 }
 
+#holder{
+    z-index:222222222222222;
+}
 /* ==========================================================================
    Print styles
    ========================================================================== */
