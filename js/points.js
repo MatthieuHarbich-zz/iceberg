@@ -1,0 +1,43 @@
+var pointModelisation = {"constel":"web", "type":"immerged", x:520, y:500,"title": "modélisation","desc": "Dans la conception d'un système d'information, la modélisation des données est l'analyse et la conception de l'information contenue dans le système. Il s'agit essentiellement d'identifier les entités logiques et les dépendances logiques entre ces entités. La modélisation des données est une représentation abstraite, dans le sens où les valeurs des données individuelles observées sont ignorées au profit de la structure, des relations, des noms et des formats des données pertinentes, même si une liste de valeurs valides est souvent enregistrée. Le modèle de données ne doit pas seulement définir la structure de données, mais aussi ce que les données veulent vraiment signifier"}
+var pointBd = {"constel":"web", "type":"immerged", x:400, y: 800,"title": "BD (base de données)", "desc": "Une base de données est un outil permettant de stocker et de retrouver l'intégralité de données brutes ou d'informations en rapport avec un thème ou une activité ; celles-ci peuvent être de natures différentes et plus ou moins reliées entre elles. Dans la très grande majorité des cas, ces informations sont très structurées"}
+var pointPHP = {"constel":"web", "type":"immerged", x:250, y:700,"title": "PHP", "desc":"PHP: Hypertext Preprocessor, langage de programmation libre utilisé pour produire des pages web dynamiques via un serveur HTTP. C’est un langage orienté objet."}
+var pointJS = {"constel":"web", "type":"immerged", x:260 ,y:950,"title": "", "desc":"C’est un langage de programmation de scripts exécutés sur les machines clientes et non sur les serveurs. Il est très utilisé pour la création d’application web et possède un nombre conséquent de librairie disponible."}
+var pointDesign ={"constel":"web","type":"immerged", x:300 ,y:1050,"title": "Webdesign", "desc":"Conception de l’identité graphique du site internet"}
+var pointUI = {"constel":"web", "type":"immerged", x:400 ,y:900,"title": "UX/UI", "desc":"élaboration d’une interface utilisateur pertinente proposant une navigation agréable et intuitive"}
+var pointCSS = {"constel":"web", "type":"immerged", x: 200,y:850,"title": "CSS", "desc":"langage de programmation décrivant la présentation et la mise en page de documents HTML. Il sert à l’implémentation du design dans le site WEB"}
+var pointHTML = {"constel":"web", "type":"immerged", x:490 ,y:670,"title": "HTML", "desc":"langage conçu pour la représentation des pages web ainsi que la structure du contenu du site web. C’est le squelette de tout site web."}
+
+var pointScenario  = {"type":"immerged", x:140, y:550,"title": "Scénario", "desc":"Un scénario est composé de plusieurs séquences (parties). Chaque séquence est composée de plusieurs scènes. Chaque scène est composée de plusieurs plans. Le plan c’est l’unité de base du langage cinématographique. Un plan peut être un plan-séquence et durer plusieurs minutes, voire toute la durée du film, reportage, etc"}
+var pointSon = {"type":"immerged", x:230, y:600,"title": "Son", "desc":"Dans le domaine des industries audiovisuelles, le « son » désigne communément le travail et les attributions de l'ingénieur du son, qui traite le son musical au moyen d'appareils électroniques."}
+var pointStoryBoard = {"type":"immerged", x:200, y:780,"title": "Storyboard", "desc":"Un storyboard, est la représentation illustrée d'un film avant sa réalisation. Il s'agit d'un document technique généralement utilisé au cinéma en préproduction afin de planifier l'ensemble des plans qui constitueront le film. On y décrit l'ensemble des paramètres cinématographiques (cadrages, mouvements de caméra et de personnages, raccords, etc.) avec la plus grande exactitude possible, afin de visualiser et planifier le tournage du film. Il est très pratique car il améliore la circulation des informations entre les équipes de tournage, et constitue donc un outil de référence lors de la production du film."}
+var pointPrisesVue = {"type":"immerged", x:300, y:870,"title": "Prises de vue & image", "desc":"Les prises de vues sont les actions de filmer un sujet. Ces actions sont dirigées par différentes règles et pratiques, telles que le plan, l’angle, le mouvement, le panorama et le travelling."}
+var pointColorimetrie ={"type":"immerged", x:350, y:980,"title": "Colorimétrie", "desc":"Traitement des couleurs de l’image pour garder une cohérence des couleurs"}
+var pointMontage = {"type":"immerged", x:350, y:600,"title": "Montage", "desc":"Le montage vidéo consiste à sélectionner des images enregistrées et à les assembler en une suite cohérente ou d'expression artistique. Le montage vidéo figure parmi l'une des étapes de post-production pour la réalisation de documentaires, téléfilms, reportages, vidéo clips, films d'animation, etc"}
+
+var pointConception ={}//"type":"immerged", x:Math.floor(Math.random()*580)+1, y:Math.floor(Math.random()*1128)+1,"title": "Conception", "desc":"Conception du contenu rédactionnel et/ou du message d’un produit imprimé"};
+var pointModeNarratif = {}//"type":"immerged", x:Math.floor(Math.random()*580)+1, y:Math.floor(Math.random()*1128)+1,"title":"Mode narratif", "desc":""}
+
+var pointEcriture = {"type":"immerged", x:100, y:715 ,"title":"Ecriture", "desc":""}
+var pointMessage = {"type":"immerged", x:270, y:480 ,"title":"Message", "desc":""}
+var pointSupport = {"type":"immerged", x:200, y:400 ,"title":"Support", "desc":""}
+var pointMiseEnPage ={"type":"immerged", x:430, y:540, "title": "Mise en page (inDesign)", "desc":"mise en page du contenu (texte et image) d’un produit imprimé en fonction du support et du format sur lequel l’on souhaite le diffuser"};
+var pointPrepresse={"type":"immerged", x:150, y: 900,"title": "Prépresse", "desc":"Ensemble des opérations techniques qui précèdent l’impression d’un produit. Choix de la technologie d’impression, imposition, vérification de la colorimétrie sont des exemples de processus de prépresse."};
+var pointStuttgart={"type":"immerged", x:180, y:300 ,"title": "Stuttgart", "desc":"Stage de deux semaines effectué à la HdM de Stuttgart en Allemagne sur la création de produits imprimés."};
+var pointCouleur ={"type":"immerged", x:340, y:498 ,"title": "Couleur", "desc":"choix des couleurs et de leurs significations, utilisation du noir et blanc"};
+var pointTraitement ={"type":"immerged", x:400, y:700, "title": "Traitement d’image", "desc":""};
+var pointFormat ={"type":"immerged", x:275, y:560, "title": "Format", "desc":"rapport entre la hauteur et la largeur de la photo. Il existe plusieurs format utilisé de diverses manière suivant l'aspect que l’on souhaite donner a sa photographie."};
+
+var pointGP = {"type":"immerged", x: 70,y:600 ,"title": "Gestion de projet", "desc":"La gestion est présente partout. Pour entreprendre et mettre à bien chaque projet, que se soit une  vidéo, une affiche, un plan marketing, il faut avoir des notions de gestion de projet, ne serait-ce que pour finir ledit projet à temps. "};
+var pointPlanif = {"type":"immerged", x:180 ,y: 708,"title": "Planification", "desc" :"Permet de planifier le projet dans le temps imparti. Il s’agit de planifier les ressources nécessaires pour réaliser les tâches"};
+var pointBusinessPlan = {"type":"immerged", x:120, y: 800 ,"title": "Business Plan", "desc":""};
+var pointMarketing ={"type":"immerged", x: 310,y:666 ,"title": "Marketing", "desc":""};
+var pointAnalyseMarche ={"type":"immerged", x:300 ,y:760 ,"title": "Analyse de marché", "desc":""};
+var pointCommunication ={"type":"immerged", x: 50,y: 500,"title": "Communication", "desc":""};
+var pointCompta ={"type":"immerged", x: 200,y:500 ,"title": "Comptabilité", "desc":""};
+var pointStrategy ={"type":"immerged", x: 170,y: 638,"title": "Stratégie", "desc":""};
+
+var pointEclairage = {x: 500, y: 400+200, "title":"Eclairage","type": "immerged","desc":"gestion de la lumière, les contrastes, exposition afin que l’éclairage soit en adéquation avec ce que l’on veut faire ressentir, exprimer. Utilisation d’outils tel que les flash, diffuseur et réflecteur."};
+var pointCadrage = {x:420, y:630, "title":"Cadrage","type": "immerged","desc":"choix artistique montrant une partie de la scène et en cachant une autre. il attire l’attention et met en valeur certain élément de la composition. À travers le cadrage, l'artiste décide de ce que le spectateur voit et ce qu'il ignore. Il peut ainsi faire jouer l'imagination du public et créer le doute, la crainte, la surprise."}
+var pointEtalonnage = {x:800-300, y:430, "title":"Etalonnage","type": "immerged","desc":"la couleur ca change tout!"}
+var pointComposition = {x:400, y:460, "title":"Composition","type": "immerged","desc":"la regle des 3/4"}
+    
