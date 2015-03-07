@@ -69,30 +69,7 @@ textarea {
                 height:200px;
             }*/
 
-            @-webkit-keyframes icebergMove {
-                 0% {
-                    -webkit-transform: translate3d(0,0,0) rotateZ(3deg);
-                    -moz-transform: translate3d(0,0,0) rotateZ(3deg);
-                    transform: translate3d(0,0,0) rotateZ(3deg);
-                  }
 
-                  100% {
-                    -webkit-transform: translate3d(-15%,0,0) rotateZ(-3deg);
-                    -moz-transform: translate3d(-15%,0,0) rotateZ(-3deg);
-                    transform: translate3d(-15%,0,0) rotateZ(-3deg);
-                  }
-                }
-
-                 @-moz-keyframes swing{
-                        0%{-moz-transform:rotateZ(-3deg)}
-                        50%{-moz-transform:rotateZ(3deg)}
-                        100%{-moz-transform:rotateZ(-3deg)}
-                    }
-                    @-webkit-keyframes swing{
-                        0%{-webkit-transform:rotateZ(-3deg)}
-                        50%{-webkit-transform:rotateZ(3deg)}
-                        100%{-webkit-transform:rotateZ(-3deg)}
-                    }
 
                     @-moz-keyframes wave{
                         0%{-moz-transform:translate3d(-40px,10px,0)}
@@ -127,6 +104,7 @@ textarea {
                         100%{-webkit-transform:translate3d(5px,-4px,0)}
 
                     }
+
 
             body{
                 background-color: #c9eaf5;
@@ -178,10 +156,6 @@ textarea {
                 position:relative;
                 top:500px;
                 left:-500px;
-                /*-webkit-animation-name:             wave ; 
-                -webkit-animation-duration:        5s; 
-                -webkit-animation-iteration-count:  infinite;
-                -webkit-transition-timing-function: linear;*/
             }
             
             #grad{
@@ -226,6 +200,9 @@ textarea {
                 display: block;
                 position:relative;
                 margin-left:2.7%;
+                display: inline;
+                cursor: pointer;
+                /*margin-left: 0.1%;*/
 
             }
 
@@ -247,11 +224,7 @@ textarea {
 
 
             
-            #profils li{
-                display: inline;
-                cursor: pointer;
-                /*margin-left: 0.1%;*/
-            }
+            
             
             #bgStart{
                 background-color: rgba(31,59,77,0.7);
