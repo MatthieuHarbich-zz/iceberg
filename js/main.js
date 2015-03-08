@@ -54,13 +54,13 @@ $(function(){
 		$(this).children('.eye').toggleClass("hidden");
 
 	});
-
+	var fade = true;
 	$(window).mousemove(function(e){
 		var top = e.clientY;
 		var windowHeight = $(window).height();
-		 console.log(windowHeight);
+		 
 		var bottom = windowHeight - top;
-		console.log(bottom);
+	
 		if(bottom<40){
 			
 			$('.journalButtonDown').fadeIn();
@@ -71,13 +71,11 @@ $(function(){
 	})
 
 	$('#journalButton').on("click", function(){
-		$(this).switchClass('journalButtonDown','journalButtonUp');
-	})
+			$(this).toggle("bottom", 600);
+				
+		})
 
-	$('.journalButtonUp').on('click', function(){
-		console.log('yeah')
-		$(this).switchClass('journalButtonUp','journalButtonDown');
-	})
+	
 	});
 
 	

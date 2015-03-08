@@ -295,13 +295,9 @@ textarea {
             }
 
             .journalButtonUp{
-                height: 40px;
-                width: 150px;
-                background-color: red;
-                position:fixed;
+                
                 bottom:600px;
-                left:300px;
-                z-index:3131231231232322;
+                
             }
 
 
