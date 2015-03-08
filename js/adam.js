@@ -96,11 +96,12 @@ $(function(){
 Raphael(function () {
 
     var r = Raphael("holder",580,1128);
+    console.log(r);
     
     fade = function (id,startX, startY, endX, endY,type, constellation) {
       
         return function () {
-
+            $("article").fadeOut()
             var text = allPointsSet[id+1];
            
             if(type == "main"){
@@ -136,6 +137,7 @@ Raphael(function () {
                         .animate({fill: "#ff0000", r: radius }, 200);  front.toFront();   
                 }              
             }
+                text.node.setAttribute('class','switched')
                 text.animate({"font-size":15},200).show();        
                 videoImage.toFront();
                 webImage.toFront()
@@ -231,24 +233,27 @@ Raphael(function () {
         var videoImage = r.image("../iceberg/img/video.png", pointVideo.x-27, pointVideo.y-20, 50, 50);
         var printImage = r.image("../iceberg/img/print.png", pointPrint.x-27, pointPrint.y-20, 50, 50);
         var imagesSet = r.set(photoImage, webImage, videoImage, printImage).click(function(){
-            scrollTo();zoomInOut();
+            scrollTo();zoomOut();
             $("path").fadeOut();
-            $(".infoTitle").fadeOut(); 
+            $(".infoTitle, .switched").fadeOut(); 
             createPointAndTexts();
             
         })
     //Settings and clicks
         photoImage.click(photoTravel);
         webImage.click(webTravel);
+            // webImage.hover(function(){
+            //     $("#site").fadeIn()
+            // })
         videoImage.click(videoTravel);
         printImage.click(printTravel);
 
     //Travelling circles
-    var    c = r.circle(cercleTravel.x, cercleTravel.y, 10).attr({stroke: "#ada", "stroke-width": 4})
-    var    cVideo = r.circle(pointVideo.x, pointVideo.y, 10).attr({stroke: "#ada", "stroke-width": 4})                 
-    var    cWeb = r.circle(pointSite.x, pointSite.y, 10).attr({stroke: "#ada", "stroke-width": 4});
-    var    cPrint = r.circle(pointPrint.x, pointPrint.y, 10).attr({stroke: "#ada", "stroke-width": 4});
-    var    travelling = r.set(c, cVideo, cWeb, cPrint).toBack();
+        var    c = r.circle(cercleTravel.x, cercleTravel.y, 10).attr({stroke: "#ada", "stroke-width": 4})
+        var    cVideo = r.circle(pointVideo.x, pointVideo.y, 10).attr({stroke: "#ada", "stroke-width": 4})                 
+        var    cWeb = r.circle(pointSite.x, pointSite.y, 10).attr({stroke: "#ada", "stroke-width": 4});
+        var    cPrint = r.circle(pointPrint.x, pointPrint.y, 10).attr({stroke: "#ada", "stroke-width": 4});
+        var    travelling = r.set(c, cVideo, cWeb, cPrint).toBack();
 
      //CREATE ALL CIRCLES and TITLES
      var allPointsSet =  r.set();
@@ -313,61 +318,83 @@ function createPointAndTexts(){
 
        
         
- createPointAndTexts()
-
+createPointAndTexts();
+circleHover();
+circleClick();
+boxClose()
 
 function showInfo(title, left, top){
     var info = $("#"+title);
-    var theLeft = left+240;
-    var theTop = top+220;
-    var x = event.clientX;     // Get the horizontal coordinate
-    var y = event.clientY;
+    var before = $(r.canvas)
     info.stop().fadeIn()
+    info.insertAfter(before)
 
-    info.css({"left":theLeft+"px", "top": theTop+"px"})
-    console.log(title, left, top);
-    $("#"+title).fadeIn();
+    info.css({"left":left-65, "top": top+15})
+ 
+
 }
 //Show title on hover
-$("circle").mouseover(function() {
-       $("text[text-id="+ $(this).attr("data-id")+"]" ).show().animate({"font-size": "15px"},200);
-       $(this).css("cursor", "pointer");
-       
+function circleHover(){
+    $("circle").mouseover(function() {  
+         $("text[text-id="+ $(this).attr("data-id")+"]" ).show().animate({"font-size": "15px"},200);
+         $(this).css("cursor", "pointer");
 
   })
   .mouseout(function() {
-      $("text[text-id="+ $(this).attr("data-id")+"]" ).fadeOut().animate({"font-size": "2px"},200);
-      var info = $("circle[data-id="+ $(this).attr("data-id")+"]").attr('info');
-      $("#"+info).delay(1000).fadeOut()   
-  });
+      var element = $("text[text-id="+ $(this).attr("data-id")+"]" );
 
-$("circle").click(function() {
+      if (element.attr('class') != "switched") {
+        element.fadeOut().animate({"font-size": "2px"},200);
+      };
+      var info = $("circle[data-id="+ $(this).attr("data-id")+"]").attr('info');
+        
+  });
+}
+function boxClose(){
+    $(".boxclose").click(function(){
+        $(this).closest("article").fadeOut();
+
+    })
+}
+function circleClick(){
+  $("circle").click(function() {
      var info = $("circle[data-id="+ $(this).attr("data-id")+"]").attr('info');
         var left = $("circle[data-id="+ $(this).attr("data-id")+"]").attr("cx");    
         var top = $("circle[data-id="+ $(this).attr("data-id")+"]").attr("cy"); 
         top = parseInt(top);
         left = parseInt(left);
         showInfo(info,left, top);
-})  
+})        
+}
+
 
 function scrollTo(){
     var to =  $("circle[data-id=36]");
-    $('html, body').animate({scrollTop: to.offset().top -200}, 2000);
+   // $('html, body').animate({scrollTop: to.offset().top -200}, 2000);
      
 }
-function zoomInOut(){
+function zoomOut(){
 
-    var scaleIn =1.3;
-    var scaleOut = 1;
     $("body").css({
-        "transform": "scale("+scaleOut+")",
+        "transform": "scale("+1.3+")",
+        "-webkit-animation-fill-mode": "forwards",
+        "animation-fill-mode": "forwards",
+        "transition": "2s"
+    });
+    setTimeout(zoomIn(), 500)
+    
+    
+   
+}      
+function zoomIn(){
+    console.log('zoomin');
+    $("body").css({
+        "transform": "scale("+1+")",
         "-webkit-animation-fill-mode": "forwards",
         "animation-fill-mode": "forwards",
         "transition": "2s"
     })
-   
-}      
-
+}
        
 });
 

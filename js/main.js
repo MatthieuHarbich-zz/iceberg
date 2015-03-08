@@ -41,7 +41,7 @@ $(function(){
 
 	$(window).on('click', function(){
 		$('#bgStart').fadeOut();
-		
+
 	})
 
 	$("#profils li").hover(function() {

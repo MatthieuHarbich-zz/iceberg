@@ -125,7 +125,18 @@ textarea {
             body{
                 background-color: #c9eaf5;
                 overflow-x:hidden;
+                  transition: all 2s ease-in-out; 
+               transform: scale(1);
             }
+            body:hover:not(#bgStart) {
+                /*transform: scale(1.2); 
+                 -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    transition: 2s;*/
+            }
+        
+
+            
 
             #iceberg img{
                 width:580px;
@@ -184,6 +195,7 @@ textarea {
                 position:absolute;
                 top:600px;
                 z-index:2;
+                pointer-events: none;
                 
             }
 
@@ -205,10 +217,12 @@ textarea {
                 width:100%;
                 /*height:260px;*/
                 /*background-color: red;*/
-                position:fixed;
+                position:fixed !important;
                 top:20px;
-               
-                z-index:101;
+
+                opacity: 0.75;
+                z-index:1;
+
             }
 
             #profils li{

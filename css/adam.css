@@ -1,10 +1,11 @@
-/*svg{
+svg{
 
-    -webkit-animation-name:             swing ; 
+    /*-webkit-animation-name:             swing ; 
     -webkit-animation-duration:         10s; 
     -webkit-animation-iteration-count:  infinite;
     -webkit-transition-timing-function: linear;
-    transform: translateZ(0);
+    transform: translateZ(0);*/
+    z-index: 5;
 }
 
 svg path {
@@ -27,32 +28,40 @@ svg path {
   to {
     stroke-dashoffset: 220;
   }
-<<<<<<< HEAD
-}*/
 
-}
-body:hover {
-    transform: scale(1.2); 
-     -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
-        transition: 2s;
-}
-body{
-  { transition: all 2s ease-in-out; }
 }
 
 
+a.boxclose{
+    float:right;
+    margin-top:-20px;
+    margin-right:-20px;
+    cursor:pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #605F61;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;       
+}
+
+.boxclose:before {
+    content: "×";
+
+}
 
 .tooltip {
-  left:200px;
-  z-index: 99;
+  
+      z-index: 99;
       position: absolute;
-      width: 99.72727298736572px;
-      height: 59.727272987365723px;
+      width: 300px;
       line-height: 20px;
       padding: 10px;
-      font-size: 14px;
-      text-align: center;
+      font-size: 12px;
+      text-align: left;
       color: rgb(113, 157, 171);
       background: rgb(255, 255, 255);
       border: 3.63636350631714px solid rgb(255, 255, 255);
@@ -76,4 +85,11 @@ body{
        -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
+}
+
+article h2{
+  text-align: center;
+}
+.about{
+  margin-bottom: 10px;
 }
