@@ -35,7 +35,7 @@ $(function(){
 
 	$(window).on('click', function(){
 		$('#bgStart').fadeOut();
-		console.log("fadeOUt");
+	
 	})
 
 	$("#profils li").hover(function() {
