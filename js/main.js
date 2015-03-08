@@ -5,8 +5,11 @@ $(function(){
 
 	var width = $(window).width();
 	var lefti = width/2 - 290;
+
+	var leftB = width/2 - 75;
 	$("#iceberg img").css({ left: lefti});
-	$("#holder").css({left:lefti, top:203+"px"})
+	$("#holder").css({left:lefti, top:203+"px"});
+	$('#journalButton').css({left:leftB});
 
 
 	
@@ -15,10 +18,13 @@ $(function(){
 		var w = $(window).width();
 
 		var left = w/2 - 290;
+		var leftBu = width/2 - 75;
 		
 		// $("#iceberg img").parent().css();
 		$("#iceberg img").css({ left: left});
-		$("#holder").css({left:left})
+		$("#holder").css({left:left});
+		$('#journalButton').css({left:leftBu});
+
 	})
 
 
@@ -35,16 +41,14 @@ $(function(){
 
 	$(window).on('click', function(){
 		$('#bgStart').fadeOut();
-		console.log("fadeOUt");
+		
 	})
 
 	$("#profils li").hover(function() {
 
 		
 			$(this).children('.eye').toggleClass("hidden");
-		
-		
-		$(this).children('.profil').toggleClass("hover");
+			$(this).children('.profil').toggleClass("hover");
 			}, function() {
 		$(this).children('.profil').toggleClass("hover");
 		$(this).children('.eye').toggleClass("hidden");
@@ -52,13 +56,31 @@ $(function(){
 	});
 
 	$(window).mousemove(function(e){
-		var top = e.pageX;
+		var top = e.clientY;
 		var windowHeight = $(window).height();
-
+		 console.log(windowHeight);
 		var bottom = windowHeight - top;
-
 		console.log(bottom);
+		if(bottom<40){
+			
+			$('.journalButtonDown').fadeIn();
+		}else{
+			$('.journalButtonDown').fadeOut();
+		}
+
 	})
 
+	$('#journalButton').on("click", function(){
+		$(this).switchClass('journalButtonDown','journalButtonUp');
+	})
 
-});
+	$('.journalButtonUp').on('click', function(){
+		console.log('yeah')
+		$(this).switchClass('journalButtonUp','journalButtonDown');
+	})
+	});
+
+	
+
+
+

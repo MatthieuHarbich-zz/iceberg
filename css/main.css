@@ -279,6 +279,33 @@ textarea {
                 z-index: 4;
             }
 
+            #journalButton{
+                display:none;
+            }
+
+            .journalButtonDown{
+                height: 40px;
+                width: 150px;
+                background-color: red;
+                position:fixed;
+                bottom:0;
+                left:300px;
+
+                z-index:31312312312;
+            }
+
+            .journalButtonUp{
+                height: 40px;
+                width: 150px;
+                background-color: red;
+                position:fixed;
+                bottom:600px;
+                left:300px;
+                z-index:3131231231232322;
+            }
+
+
+
 
 
 
