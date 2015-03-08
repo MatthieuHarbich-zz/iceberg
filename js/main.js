@@ -26,9 +26,9 @@ $(function(){
 	   var st = $(this).scrollTop();
 	   
 	   if (st < 280) {
-	   		$("#profils").css({ 'opacity' : (0.75 - st/500) });
+	   		$(".profil").css({ 'opacity' : (0.75 - st/500) });
 	   } else{
-	   		$("#profils").css({ 'opacity' : (0.75 - 280/500) });
+	   		$(".profil").css({ 'opacity' : (0.75 - 280/500) });
 	   };
 	   
 	});
@@ -39,10 +39,26 @@ $(function(){
 	})
 
 	$("#profils li").hover(function() {
-		$(this).children('.eye').toggleClass("hidden");
+
+		
+			$(this).children('.eye').toggleClass("hidden");
+		
+		
+		$(this).children('.profil').toggleClass("hover");
 			}, function() {
+		$(this).children('.profil').toggleClass("hover");
 		$(this).children('.eye').toggleClass("hidden");
+
 	});
+
+	$(window).mousemove(function(e){
+		var top = e.pageX;
+		var windowHeight = $(window).height();
+
+		var bottom = windowHeight - top;
+
+		console.log(bottom);
+	})
 
 
 });

@@ -151,7 +151,7 @@ textarea {
                 position:relative;
                 top:500px;
                 left:-140px;
-                -webkit-animation-name:             wavei ; 
+                -webkit-animation-name:             waveir ; 
                 -webkit-animation-duration:         5s; 
                 -webkit-animation-iteration-count:  infinite;
                 -webkit-transition-timing-function: linear;
@@ -161,7 +161,7 @@ textarea {
                 position:relative;
                 top:500px;
                 left:-140px;
-                -webkit-animation-name:             waveii ; 
+                -webkit-animation-name:             waveiir ; 
                 -webkit-animation-duration:         7s; 
                 -webkit-animation-iteration-count:  infinite;
                 -webkit-transition-timing-function: linear;
@@ -171,7 +171,7 @@ textarea {
                 position:relative;
                 top:500px;
                 left:-500px;
-                -webkit-animation-name:             wave ; 
+                -webkit-animation-name:             waver ; 
                 -webkit-animation-duration:        5s; 
                 -webkit-animation-iteration-count:  infinite;
                 -webkit-transition-timing-function: linear;
@@ -207,7 +207,7 @@ textarea {
                 /*background-color: red;*/
                 position:fixed;
                 top:20px;
-                opacity: 0.75;
+               
                 z-index:101;
             }
 
@@ -218,12 +218,17 @@ textarea {
                 margin-left:2.7%;
             }
 
-            #profils .profil{
+            #profils .profil {
                 width:6%;
                 overflow:hidden;
                 /*position:absolute;*/
                 left:0;
+                opacity: 0.75;
 
+            }
+
+            .hover{
+                opacity: 1;
             }
 
             .eye{
