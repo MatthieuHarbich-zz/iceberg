@@ -1,3 +1,47 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?ux2aez');
+	src:url('../fonts/icomoon.eot?#iefixux2aez') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?ux2aez') format('woff'),
+		url('../fonts/icomoon.ttf?ux2aez') format('truetype'),
+		url('../fonts/icomoon.svg?ux2aez#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-i-Code:before {
+	content: "\e600";
+}
+
+.icon-i-Movie:before {
+	content: "\e601";
+}
+
+.icon-i-Photo:before {
+	content: "\e602";
+}
+
+.icon-i-Print:before {
+	content: "\e603";
+}
+
+
+
+
 /* Main Nav */
 
 nav {
@@ -6,7 +50,7 @@ nav {
 	width: 100%;
 }
 
-.btn {
+.btn{
 	color: white;
 	padding: 10px;
 }
@@ -16,17 +60,22 @@ nav {
 	width: 100%;
 	position: absolute;
 	z-index: 100;
+
+	
 }
 
 .content {
 	margin-top: 10px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 960px;
+	width: 80%;
+	padding: 15px;
+	background-image: url("noisy.png");
+	overflow: auto;
+	zoom:1;
 }
 
 .col-1 {
-	width: 30%;
 	padding: 5px;
 	float: left;
 	margin-right: 10px;
@@ -66,29 +115,68 @@ nav {
 }
 
 
-/** IMAGE RONDE**/
-.circular {
-	text-align: center;
-	border: solid 2px;
-	width: 100px;
-	height: 100px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	background: url(http://colouringbook.org/Holidays/Xmas/KITTY/kitty_icon_christmas_xmas_stuffed_animal_coloring_book_colouring-100px.png) no-repeat;
-	}
+#profilMov{
+	width: 20%;
+}
 
-.circular img {
-	opacity: 0;
-	filter: alpha(opacity=0);
-	}
 
+.profilNavLeft{
+	float: left;
+	width: 10px;
+}
+
+#profilMov img{
+	max-width:100%;
+	max-height:100%;
+}
+
+
+#profilDesc .age{
+	font-size: 0.7em;
+	margin-left: 5px;
+}
+
+
+#profilDesc h1{
+	margin-top: 0px;
+}
+
+
+.shortDesc p{
+	margin-bottom: 15px;
+}
+
+.shortDesc p:last-child{
+	margin-bottom: 0px;
+}
+
+#profilDesc{
+	width: 25%;
+}
+
+/**profilPicture**/
+
+#profilPicture{
+	width: 20%;
+}
+
+#profilPicture img{
+	max-width:100%;
+	max-height:100%;
+}
 
 
 /**SKILLS**/
-.skills{
+#profilSkills{
+	width: 10%;
+	height: auto;
 	position: relative;
 	clear: both;
+
+}
+
+.skills{
+	overflow: hidden;
 }
 
 .skillSet{
@@ -97,17 +185,19 @@ nav {
 }
 .skill{
 	float: left;
-	height: 3px;
-	background-color: red;
+	height: 5px;
+	background-color: #0e3852;
 	margin-left: 5px;
 
-	 -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+	-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
     transition: width 2s;
 }
 
 
 .skillsName{
 	float: left;
+	font-size: 2.5em;
+	color: #0e3852;
 }
 
 dl {

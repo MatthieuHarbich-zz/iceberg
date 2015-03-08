@@ -4,21 +4,12 @@ $( ".close" ).click(function() {
 
 
 
-
-
-
-
-
-
 $( ".open" ).click(function() {
   $("#profilContent").show();
 
   $.getJSON('data.json', function(json) {
   	toTemplate(json);
   });
-
-
-
 });
 
 
@@ -26,65 +17,51 @@ $( ".open" ).click(function() {
 
 
 
-
-
-
-
-  
-/*
-var per_1 = {
-		name: "John Smith",
-		age: 26,
-		shortDesc: "Curabitur consectetur, libero a consequat eleifend",
-		avatare: "avt_url",
-		profilPict: "pp_url",
-		skills: [
-				{ 
-					skillsName: "Photo"	,
-					value: "34" }, 
-				{ 
-					skillsName: "Video",	
-					value: "56" }, 
-				{ 
-					skillsName: "Code",	
-					value: "40" }, 
-					{ 
-					skillsName: "Management",	
-					value: "12" }, 
-				]
-		
-};
-*/
-
-
-
-//console.log(per_1.skills[0]);
-//console.log(per_1.skills[0].skillsName);
-
 /** TEMPLATE SKILLS + NAME **/
 function toTemplate(data) {
 	
 	console.log(data);
 
-var template_Skills = 		"{{#skills}}<div class=\"skills\">" +
-							"<div class=\"skillsName\"><p>{{skillsName}}</p></div>"+
+var template_profilSkills = 		"{{#skills}}<div class=\"skills\">" +
+							"<div class=\"skillsName\"><span class=\"icon-i-{{skillsName}} + \"></div>"+
 							"<div class=\"skillSet\">" +
                             "<div class=\"skill\" style=\"width:{{value}}px\"></div>" +
                             "</div>" +
                             "</div>{{/skills}}";
 
-var html = Mustache.to_html(template_Skills, data);
-$('#sampleArea').html(html);
+var html = Mustache.to_html(template_profilSkills, data);
+$('#profilSkills').html(html);
 
 /** TEMPLATE shortDesc **/
 
-var template_shortDesc = 		"<div class=\"shortDesc\">{{shortDesc}}</div>";
+var template_profilDesc = 				"<h1>{{name}}<span class=\"age\">({{age}})</span></h1>" +
+										
+										"<div class=\"shortDesc\">{{#shortDesc}}<p>{{.}}</p>{{/shortDesc}}</div>";
 
-var html = Mustache.to_html(template_shortDesc, data);
-$('#shortDesc').html(html);
+var html = Mustache.to_html(template_profilDesc, data);
+$('#profilDesc').html(html);
+
+/** TEMPLATE profilPicture **/
+
+var template_profilPicture = 		"<img src=\"media/avatar_1.jpg\"/>";
+
+var html = Mustache.to_html(template_profilPicture, data);
+$('#profilPicture').html(html);
+
+/** TEMPLATE profilMov **/
+
+var template_profilMov = 		"<img src=\"media/mico.jpg\"/>";
+
+var html = Mustache.to_html(template_profilMov, data);
+$('#profilMov').html(html);
 
 
 
 };
+
+
+
+
+
 
 

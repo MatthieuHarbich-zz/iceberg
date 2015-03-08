@@ -1,7 +1,12 @@
  {
 		"name": "John Smith",
 		"age": 26,
-		"shortDesc": "Curabitur consectetur, libero a consequat eleifend",
+		"shortDesc": [
+		 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in dapibus massa, eget fringilla mauris. Proin id mollis tellus. Suspendisse ut dignissim elit. ", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in dapibus massa, eget fringilla mauris. Proin id mollis tellus. Suspendisse ut dignissim elit. "
+		],
+		
+
+
 		"avatare": "avt_url",
 		"profilPict": "pp_url",
 		"skills": [
@@ -9,13 +14,13 @@
 					"skillsName": "Photo"	,
 					"value": "34" }, 
 				{ 
-					"skillsName": "Video",	
-					"value": "56" }, 
+					"skillsName": "Movie",	
+					"value": "33" }, 
 				{ 
 					"skillsName": "Code",	
 					"value": "40" }, 
 					{ 
-					"skillsName": "Management",	
+					"skillsName": "Print",	
 					"value": "12" }
 				]
 		
