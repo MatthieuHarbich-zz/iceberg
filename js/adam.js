@@ -96,7 +96,6 @@ $(function(){
 Raphael(function () {
 
     var r = Raphael("holder",580,1128);
-    console.log(r);
     
     fade = function (id,startX, startY, endX, endY,type, constellation) {
       
@@ -228,10 +227,10 @@ Raphael(function () {
    
 
     // SVG MAIN POINTS
-        var photoImage = r.image("../iceberg/img/photo.png", pointPhoto.x-27, pointPhoto.y-20, 50, 50);
-        var webImage = r.image("../iceberg/img/prog.png", pointSite.x-27, pointSite.y-25, 50, 50);
-        var videoImage = r.image("../iceberg/img/video.png", pointVideo.x-27, pointVideo.y-20, 50, 50);
-        var printImage = r.image("../iceberg/img/print.png", pointPrint.x-27, pointPrint.y-20, 50, 50);
+        var photoImage = r.image("img/photo.png", pointPhoto.x-27, pointPhoto.y-20, 50, 50);
+        var webImage = r.image("img/prog.png", pointSite.x-27, pointSite.y-25, 50, 50);
+        var videoImage = r.image("img/video.png", pointVideo.x-27, pointVideo.y-20, 50, 50);
+        var printImage = r.image("img/print.png", pointPrint.x-27, pointPrint.y-20, 50, 50);
         var imagesSet = r.set(photoImage, webImage, videoImage, printImage).click(function(){
             scrollTo();zoomOut();
             $("path").fadeOut();

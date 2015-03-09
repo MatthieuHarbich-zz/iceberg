@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/* $(document).ready(function() {
 $("#formationContent").hide();
 
 
@@ -31,9 +31,11 @@ function showContentFormation(key){
   	toTemplateFormation(json);
   });
 };
-
+*/
 
 /** TEMPLATE SKILLS + NAME **/
+
+/*
 function toTemplateFormation(data) {
 	console.log(data);
 
@@ -42,22 +44,19 @@ var html = Mustache.to_html(template_title, data);
 
 $('.formationTitle').html(html);
 
+*/
 /** TEMPLATE shortDesc **/
-
+/**
 var template_mediaDesc = 				"{{#shortDesc}}<p>{{.}}</p>{{/shortDesc}}";
 var html = Mustache.to_html(template_mediaDesc, data);
 
 $('.formationDesc').html(html);
 
-/** TEMPLATE profilPicture **/
 var template_contentMedia = 		"<img src=\"media/{{media}}\"/>";
 var html = Mustache.to_html(template_contentMedia, data);
-
 $('.formationMedia').html(html);
-
-
 };
-
+**/
 
 
 

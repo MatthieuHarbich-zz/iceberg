@@ -212,6 +212,20 @@ textarea {
             }
 
 
+
+            .profilDesc p:last-child{
+                margin-top: 15px;
+                border-top: solid 1px;
+                padding-top: 5px;
+            }
+            
+         
+
+            .profilDesc .skillsList:not(:first-child) {
+                margin-left: 15px;
+
+            }
+
             
             #profils{
                 display: block;
@@ -221,7 +235,6 @@ textarea {
                 position:fixed !important;
                 top:20px;
 
-                opacity: 0.75;
                 z-index:1000;
 
             }
@@ -241,6 +254,12 @@ textarea {
                 opacity: 0.75;
 
             }
+
+            .selected {
+                opacity: 1;
+                background-color: red;
+            }
+
 
             .hover{
                 opacity: 1;

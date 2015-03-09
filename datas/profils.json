@@ -1,0 +1,502 @@
+[
+{
+    "origin": "Suisse",
+    "profilPict": "mike.jpg",
+    "name": "Fabrice Clerc",
+    "btn_name": "fabrice",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "27",
+    "background": "concepteur multim\u00e9dia",
+    "hobby": "multim\u00e9dia, voyage",
+    "skillsperso": [ 
+      {"skillTag": "jQuery"},
+      {"skillTag": "HTML5/CSS"},
+      {"skillTag": "motion design"},
+      {"skillTag": "UI/UX"},
+      {"skillTag": "PHP"}
+     
+    ],
+    "r\u00f4le": "responsable frontend, assistant chef de projet"
+  },
+
+  {
+    "origin": "Suisse",
+    "profilPict": "mike.jpg",
+    "name": "Natalie Canonica",
+     "btn_name": "natalie",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "22",
+    "background": "informaticienne avec maturit\u00e9 professionnelle",
+    "hobby": "natation synchronis\u00e9e, voyager",
+    "skillsperso": [
+      {
+        "skillTag": "Javascript"
+      },
+      {
+        "skillTag": "CSS"
+      },
+      {
+        "skillTag": "HTML5"
+      },
+      {
+        "skillTag": "Print"
+      },
+      {
+        "skillTag": "Marketing"
+      }
+    ],
+    "r\u00f4le": "responsable print"
+  },
+
+  {
+    "origin": "Suisse",
+    "profilPict": "mike.jpg",
+    "name": "Quentin de Lattre",
+     "btn_name": "quentin",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "variable",
+    "background": "matu f\u00e9d\u00e9rale, EPFL (double \u00e9chec en 1\u00e8re), 1 an de stage en bo\u00eete de comm",
+    "hobby": "escalade, graphisme, explorer internet, ap\u00e9ro",
+    "skillsperso": [
+      {
+        "skillTag": "UX/UI"
+      },
+      {
+        "skillTag": "Photoshop"
+      },
+      {
+        "skillTag": "Illustrator"
+      },
+      {
+        "skillTag": "Print"
+      },
+      {
+        "skillTag": ""
+      }
+    ],
+    "r\u00f4le": "corporate desginer, r\u00e9dacteur"
+  },
+{
+    "origin": "Suisse",
+    "profilPict": "clelia.jpg",
+    "name": "Cl\u00e9lia Panchaud",
+     "btn_name": "clelia",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "23",
+    "background": "Gymnase matu",
+    "hobby": "course \u00e0 pied, ski, voyage",
+    "skillsperso": [
+      {
+        "skillTag": "Image/Photographie"
+      },
+      {
+        "skillTag": "Communication/Marketing"
+      },
+      {
+        "skillTag": "Gestion de projet"
+      },
+      {
+        "skillTag": "Site web"
+      },
+      {
+        "skillTag": "UX/UI"
+      }
+    ],
+    "r\u00f4le": "cheffe de projet <3"
+  },
+{
+    "origin": "Suisse, portuguais",
+    "profilPict": "mike.jpg",
+    "name": "Richard Ammann",
+     "btn_name": "richard",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "22",
+    "background": "CFC d'automaticien avec maturit\u00e9 professionnelle",
+    "hobby": "musique, vid\u00e9o, sport",
+    "skillsperso": [
+      {
+        "skillTag": "Site Web"
+      },
+      {
+        "skillTag": "Image/photographie"
+      },
+      {
+        "skillTag": "Montage Vid\u00e9o"
+      },
+      {
+        "skillTag": "Print"
+      },
+      {
+        "skillTag": "Communication"
+      }
+    ],
+    "r\u00f4le": "responsable vid\u00e9o"
+  },
+{
+    "origin": "Allemand",
+    "profilPict": "mike.jpg",
+    "name": "Matthieu Harbich",
+     "btn_name": "matthieu",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "23",
+    "background": "Gymnase matu",
+    "hobby": "snowboard, tennis, photographie",
+    "skillsperso": [
+      {
+        "skillTag": "Javascript"
+      },
+      {
+        "skillTag": "UX/UI"
+      },
+      {
+        "skillTag": "HTML5"
+      },
+      {
+        "skillTag": "Image, photographie"
+      },
+      {
+        "skillTag": "Montage vid\u00e9o"
+      }
+    ],
+    "r\u00f4le": "corporate desginer, r\u00e9dacteur"
+  },
+{
+    "origin": "Yverdon",
+    "profilPict": "mike.jpg",
+    "name": "Romain Cerantola",
+     "btn_name": "romain",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "27",
+    "background": "B\u00fbcheron, vendeur, chauffeur poids lourd, cfc automaticien",
+    "hobby": "musique, \u00e9criture, lecture, mulitm\u00e9dia, sport",
+    "skillsperso": [
+      {
+        "skillTag": "UX/UI"
+      },
+      {
+        "skillTag": "Vid\u00e9o"
+      },
+      {
+        "skillTag": "Son"
+      },
+      {
+        "skillTag": "Communication/Marketing"
+      },
+      {
+        "skillTag": "Esprit d'\u00e9quipe"
+      }
+    ],
+    "famille": "un fils de 10 ans",
+    "r\u00f4le": "responsable documentation de projet"
+  },
+  {
+    "origin": "Neuch\u00e2tel",
+    "profilPict": "mike.jpg",
+    "name": "Laurent Lienher",
+     "btn_name": "laurent",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "22",
+    "background": "CFC m\u00e9diamaticien",
+    "hobby": "jeu vid\u00e9o, ski, hockey sur glace",
+    "skillsperso": [
+      {
+        "skillTag": "Site web"
+      },
+      {
+        "skillTag": "Mod\u00e9lisation"
+      },
+      {
+        "skillTag": "Javascript"
+      },
+      {
+        "skillTag": "UX/UI"
+      },
+      {
+        "skillTag": "Photoshop"
+      }
+    ],
+    "r\u00f4le": "support vid\u00e9o"
+  },
+
+
+
+
+ 
+  
+  {
+    "origin": "Boudry",
+    "profilPict": "mike.jpg",
+    "name": "Anthony Da Silva",
+     "btn_name": "anthony",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "24",
+    "background": "CFC m\u00e9diamaticien, CPNV + matu",
+    "hobby": "jeu vid\u00e9o, films, bushcraft",
+    "skillsperso": [
+      {
+        "skillTag": "Design"
+      },
+      {
+        "skillTag": "Vid\u00e9o"
+      },
+      {
+        "skillTag": "Son"
+      },
+      {
+        "skillTag": "Photoshop"
+      },
+      {
+        "skillTag": "Montage vid\u00e9o"
+      }
+    ],
+    "r\u00f4le": "concepteur vid\u00e9o"
+  },
+  
+  {
+    "origin": "Suisse",
+    "profilPict": "mike.jpg",
+    "name": "Maya Jeanmonod",
+     "btn_name": "maya",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "23",
+    "background": "Gymnase matu + cfc de m\u00e9diamaticienne",
+    "hobby": "sidecar de course, photo, jeux vid\u00e9o",
+    "skillsperso": [
+      {
+        "skillTag": "Site Web"
+      },
+      {
+        "skillTag": "Javascript"
+      },
+      {
+        "skillTag": "Photographie"
+      },
+      {
+        "skillTag": "Illustrator"
+      },
+      {
+        "skillTag": "Print"
+      }
+    ],
+    "r\u00f4le": "Responsable photo + support print"
+  },
+  
+  
+  
+  
+   {
+    "origin": "Pologne / Suisse",
+    "profilPict": "mike.jpg",
+    "name": "Adam Gina",
+     "btn_name": "adam",
+    "skills": [
+      {
+        "skillsName": "Photo",
+        "value": "34"
+      },
+      {
+        "skillsName": "Movie",
+        "value": "33"
+      },
+      {
+        "skillsName": "Code",
+        "value": "40"
+      },
+      {
+        "skillsName": "Print",
+        "value": "12"
+      }
+    ],
+    "age": "23",
+    "background": "",
+    "hobby": "instrument, langues, prog",
+    "skillsperso": [
+      {
+        "skillTag": "Site web"
+      },
+      {
+        "skillTag": "Javascript"
+      },
+      {
+        "skillTag": "Vid\u00e9o"
+      },
+      {
+        "skillTag": "Son"
+      },
+      {
+        "skillTag": "Montage vid\u00e9o"
+      }
+    ],
+    "r\u00f4le": "codeur fou"
+  }
+]
