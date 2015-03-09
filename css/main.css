@@ -61,6 +61,7 @@ textarea {
 *{
                 padding:0;
                 margin:0;
+
                 
 
             }
@@ -125,7 +126,12 @@ textarea {
             body{
                 background-color: #c9eaf5;
                 overflow-x:hidden;
+<<<<<<< HEAD
 
+=======
+                  transition: all 2s ease-in-out; 
+               
+>>>>>>> 606ef00a85cab0ea0cd05e6e3cba90f9aef215fc
             }
             body:hover:not(#bgStart) {
                 /*transform: scale(1.2); 
@@ -210,6 +216,20 @@ textarea {
             }
 
 
+
+            .profilDesc p:last-child{
+                margin-top: 15px;
+                border-top: solid 1px;
+                padding-top: 5px;
+            }
+            
+         
+
+            .profilDesc .skillsList:not(:first-child) {
+                margin-left: 15px;
+
+            }
+
             
             #profils{
                 display: block;
@@ -219,8 +239,7 @@ textarea {
                 position:fixed !important;
                 top:20px;
 
-                opacity: 0.75;
-                z-index:1;
+                z-index:1000;
 
             }
 
@@ -233,12 +252,18 @@ textarea {
 
             #profils .profil {
                 width:6%;
-                overflow:hidden;
+                /*overflow:hidden;*/
                 /*position:absolute;*/
                 left:0;
                 opacity: 0.75;
 
             }
+
+            .selected {
+                opacity: 1;
+                background-color: red;
+            }
+
 
             .hover{
                 opacity: 1;

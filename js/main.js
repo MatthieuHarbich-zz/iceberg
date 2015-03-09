@@ -54,6 +54,7 @@ $(function(){
 		$(this).children('.eye').toggleClass("hidden");
 
 	});
+	
 	var fade = true;
 	$(window).mousemove(function(e){
 		var top = e.clientY;
@@ -71,7 +72,8 @@ $(function(){
 	})
 
 	$('#journalButton').on("click", function(){
-			$(this).toggle("bottom", 600);
+			console.log("yeah");
+			// $(this).toggle("bottom", 600);
 				
 		})
 
