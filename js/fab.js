@@ -27,6 +27,7 @@ $(".open").click(function() {
 	var key = $(this).attr('data-nav');
 	showContent(key);
 	setPreviousNext(key);
+	console.log('asd')
 });
 
 });

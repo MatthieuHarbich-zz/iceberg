@@ -125,8 +125,7 @@ textarea {
             body{
                 background-color: #c9eaf5;
                 overflow-x:hidden;
-                  transition: all 2s ease-in-out; 
-               transform: scale(1);
+
             }
             body:hover:not(#bgStart) {
                 /*transform: scale(1.2); 

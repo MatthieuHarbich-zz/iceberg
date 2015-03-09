@@ -63,18 +63,19 @@
             <img src="layers/instructions.png" alt="">
         </div>
         <ul id="profils">
-            <li class="open" data-nav="mike"><img src="layers/profils/fabrice.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="jean"><img src="layers/profils/naty.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open"><img src="layers/profils/quentin.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open"><img src="layers/profils/clelia.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open"><img src="layers/profils/richard.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="open"><img src="layers/profils/fabrice.png" class="profil"><img src="layers/eye.png" class="hidden eye" profil-id="fabrice"></li>
+            <li class="open"><img src="layers/profils/naty.png" class="profil" profil-id="naty"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="open"><img src="layers/profils/quentin.png" class="profil" profil-id="quentin"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="open"><img src="layers/profils/clelia.png" class="profil" profil-id="clelia"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="open"> <img src="layers/profils/richard.png" class="profil" profil-id="richard"><img src="layers/eye.png" class="hidden eye"></li>
             <li class="open"><img src="layers/profils/matthieu.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
             <li class="open"><img src="layers/profils/romain.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
             <li class="open"><img src="layers/profils/laurent.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
             <li class="open"><img src="layers/profils/anthony.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
             <li class="open"><img src="layers/profils/maya.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open"><img src="layers/profils/adam.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="open"><img src="layers/profils/adam.png" class="profil" profil-id="adam"><img src="layers/eye.png" class="hidden eye"></li>
         </ul>
+
 
         
 
@@ -189,13 +190,7 @@
         </article>
         <article id="programmation" class="tooltip"> <a class="boxclose"></a>
             <h2>Programmation!</h2>
-            <div class= "about"> 
-                <h3>BD (Base de données)</h3>
-                <p>Une base de données est un outil permettant de stocker et de retrouver l'intégralité de données brutes ou d'informations en rapport avec un thème ou une activité ; celles-ci peuvent être de natures différentes et plus ou moins reliées entre elles. Dans la très grande majorité des cas, ces informations sont très structurées
-             </p>
-            </div>
-            <div class="about"><h3 class="aboutTitle">PHP</h3><p>PHP: Hypertext Preprocessor, langage de programmation libre utilisé pour produire des pages web dynamiques via un serveur HTTP. C’est un langage orienté objet.</p></div>
-            <div class="about"><h3 class="aboutTitle">JavaScript</h3><p>C’est un langage de programmation de scripts exécutés sur les machines clientes et non sur les serveurs. Il est très utilisé pour la création d’application web et possède un nombre conséquent de librairie disponible.</p></div>
+            <p>La programmation est au développement web ce que la mozarella est à la pizza : c’est ce qui lie les tranches entre elles, mais s’il y en a trop, c’est indigeste. Et comme pour la pizza, chaque ingrédient de la programmation a sa raison d’être (sauf flash, qui est les anchois du web). Du HTML pour la structure et le contenu, du PHP pour générer du contenu automatiquement, du CSS pour les styles, du Javascript pour rendre les pages interactives et tant d’autres. À chaque besoin son langage.</p></div>
            
         </article>
         <article id="conceptionPhoto" class="tooltip"> <a class="boxclose"></a>
@@ -229,7 +224,7 @@
         <div id="plongeur"></div>
 
         <div id="footer"></div>
-
+        <script src="js/competences.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/jqueryui.js"></script>
