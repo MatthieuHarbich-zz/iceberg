@@ -39,6 +39,47 @@
 	content: "\e603";
 }
 
+#previousProfil{
+	
+}
+
+
+
+
+.formationDesc{
+	width: 30%;
+}
+
+.formationMedia{
+	width: auto;
+}
+
+
+/**GallerieNavigation**/
+
+.navProfil{
+	display: block;
+  	position: absolute;
+  	top: 33%;
+
+}
+
+.navProfil img{
+	width: 50%;
+	height: 50%;
+	cursor: pointer;
+}
+
+
+#previousProfil{
+	left: 0px;
+		
+}
+
+#nextProfil{
+	right: 0px;
+	text-align: right;
+}
 
 
 
@@ -56,23 +97,27 @@ nav {
 }
 
 
-#profilContent{
+.mainContent{
 	width: 100%;
-	position: fixed;
+	position: relative;
 	z-index: 100;
-
-	
 }
 
+
+#profilContent{display: none;}
+#formationContent{display: none;}
+
 .content {
-	margin-top: 9%;
+	margin-top: 10px;
 	margin-right: auto;
 	margin-left: auto;
 	width: 80%;
-	padding: 15px;
+	padding: 15px 50px;
 	background-image: url("noisy.png");
 	overflow: auto;
 	zoom:1;
+	position: relative;
+
 }
 
 .col-1 {
@@ -88,14 +133,14 @@ nav {
 
 .bottomClose{
 	clear: both;
-	position: relative;
+	position: absolute;
 	z-index: 999;
 	float: left;
 	width: 100%;
 	color: red;
 
 	text-align: center;
-	margin-bottom: -10px;
+	bottom: -10px;
 
 }
 
@@ -115,8 +160,9 @@ nav {
 }
 
 
-#profilMov{
-	width: 20%;
+.profilMov{
+	width: 40%;
+	min-width: 300px;
 }
 
 
@@ -125,19 +171,19 @@ nav {
 	width: 10px;
 }
 
-#profilMov img{
+.profilMov img{
 	max-width:100%;
 	max-height:100%;
 }
 
 
-#profilDesc .age{
+.profilDesc .age{
 	font-size: 0.7em;
 	margin-left: 5px;
 }
 
 
-#profilDesc h1{
+.profilDesc h1{
 	margin-top: 0px;
 }
 
@@ -150,42 +196,47 @@ nav {
 	margin-bottom: 0px;
 }
 
-#profilDesc{
+.profilDesc{
 	width: 25%;
+	min-width: 250px;
 }
 
 /**profilPicture**/
 
-#profilPicture{
+.profilPicture{
 	width: 20%;
+	min-width: 100px;
 }
 
-#profilPicture img{
+.profilPicture img{
 	max-width:100%;
 	max-height:100%;
 }
 
 
 /**SKILLS**/
-#profilSkills{
+.profilSkills{
 	width: 10%;
+	min-width: 150px;
 	height: auto;
 	position: relative;
 	clear: both;
+	margin-top: 5%;
 
 }
 
 .skills{
 	overflow: hidden;
+
 }
 
 .skillSet{
-	padding-top: 10px;
+	padding-top: 15px;
 
 }
 .skill{
 	float: left;
-	height: 5px;
+	height: 10px;
 	background-color: #0e3852;
 	margin-left: 5px;
 
@@ -211,3 +262,68 @@ dt {
 dd {
  float:left;
  width:70%; /* adjust the width; make sure the total of both is 100% */
+}
+
+
+
+
+
+.js-video {
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.js-video.widescreen {
+  padding-bottom: 56.34%;
+}
+ 
+.js-video.vimeo {
+  padding-top: 0;
+}
+
+
+
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+
+
+
+
+
+button#load{
+	z-index: 1000;
+    padding: 0 3em;
+    outline: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1em;
+    line-height: 4;
+    overflow: hidden;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+}
+
+
+#loader-img{
+margin: 0 auto;
+display: block;
+}
+ 

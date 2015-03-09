@@ -370,7 +370,7 @@ function circleClick(){
 
 function scrollTo(){
     var to =  $("circle[data-id=36]");
-   // $('html, body').animate({scrollTop: to.offset().top -200}, 2000);
+    $('html, body').animate({scrollTop: to.offset().top -200}, 2000);
      
 }
 function zoomOut(){

@@ -305,7 +305,7 @@ textarea {
                 bottom:0;
                 left:300px;
 
-                z-index:31312312312;
+                z-index:200;
             }
 
             .journalButtonUp{
@@ -385,7 +385,7 @@ textarea {
 }
 
 #holder{
-    z-index:222222222222222;
+    z-index:201;
 }
 /* ==========================================================================
    Print styles
