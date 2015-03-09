@@ -255,13 +255,12 @@ textarea {
                 /*overflow:hidden;*/
                 /*position:absolute;*/
                 left:0;
-                opacity: 0.75;
+                opacity: 0.5;
 
             }
 
-            .selected {
+            #profils .selected > img {
                 opacity: 1;
-                background-color: red;
             }
 
 
