@@ -3,10 +3,24 @@ $(document).ready(function() {
 $("#profilContent").hide();
 $("#formationContent").hide();
 
+
+
 var data = $.getJSON('datas/profils.json', function(json) {
 	    data = json;
 });
-	
+
+
+$( ".open" ).hover(
+  function() {
+  	var key = $(this).attr("data-nav");
+    toTemplateSkills(data, key);
+    console.log("hfadskfjha" + key);
+  }, function() {
+    $(".skillsSample").empty();
+  }
+);
+
+
 $(".open").click(function() {
 	var key = $(this).attr("data-nav");
 	var size = data.length;
@@ -110,7 +124,7 @@ var template_profilDesc = 				"<h1>{{name}}<span class=\"age\">({{age}})</span><
 var html = Mustache.to_html(template_profilDesc, data);
 $('.profilDesc').html(html);
 
-var template_profilPicture = 		"<img src=\"media/{{profilPict}}\"/>";
+var template_profilPicture = 		"<img src=\"img/{{btn_name}}.jpg\"/>";
 
 var html = Mustache.to_html(template_profilPicture, data);
 $('.profilPicture').html(html);
@@ -121,7 +135,19 @@ var template_profilMov = 		"<div class=\"js-video [vimeo, widescreen]\">"+
 var html = Mustache.to_html(template_profilMov, data);
 $('.profilMov').html(html);
 
+};
 
+function toTemplateSkills (data, key){
+
+var template_profilSample = "{{#skills}}<div class=\"skills\">" +
+							"<div class=\"skillsName\"><span class=\"icon-i-{{skillsName}} + \"></div>"+
+							"<div class=\"skillSet\">" +
+                            "<div class=\"skill\" style=\"width:{{value}}px\"></div>" +
+                            "</div>" +
+                            "</div>{{/skills}}";
+
+var html = Mustache.to_html(template_profilSample, data);
+$('.skillsSample').html(html);
 };
 
 
