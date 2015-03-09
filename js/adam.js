@@ -7,11 +7,11 @@ $(function(){
 
     //CONSTANTS
             var idCreated = 0;
-            var immergedPointStyle = {stroke: "none", fill: "#ffc885"};
+            var immergedPointStyle = {stroke: "none", fill: "#fff"};
             var alwaysOnStyle = {fill: "white",stroke: "none"}
             var mainPointFont = {"font-size": 20, "font-family": "Arial"}
             var visibleFont = {"font-size": 5, "font-family":"Helvetica", "fill":"white"}
-            var radius = 10;
+            var radius = 7;
             var radiusMain = 25;
             var radiusImmerged = 15;
         //COLORS
@@ -96,17 +96,16 @@ $(function(){
 Raphael(function () {
 
     var r = Raphael("holder",580,1128);
-    console.log(r);
     
     fade = function (id,startX, startY, endX, endY,type, constellation) {
       
         return function () {
-            $("article").fadeOut()
+            $("article").fadeOut();
+            $(".profilHoveredText").fadeOut();
             var text = allPointsSet[id+1];
            
             if(type == "main"){
                 var back = r.line(startX, startY, endX, endY);
-
 
             }
             else{
@@ -228,14 +227,14 @@ Raphael(function () {
    
 
     // SVG MAIN POINTS
-        var photoImage = r.image("../iceberg/img/photo.png", pointPhoto.x-27, pointPhoto.y-20, 50, 50);
-        var webImage = r.image("../iceberg/img/prog.png", pointSite.x-27, pointSite.y-25, 50, 50);
-        var videoImage = r.image("../iceberg/img/video.png", pointVideo.x-27, pointVideo.y-20, 50, 50);
-        var printImage = r.image("../iceberg/img/print.png", pointPrint.x-27, pointPrint.y-20, 50, 50);
+        var photoImage = r.image("img/photo.png", pointPhoto.x-27, pointPhoto.y-20, 50, 50);
+        var webImage = r.image("img/prog.png", pointSite.x-27, pointSite.y-25, 50, 50);
+        var videoImage = r.image("img/video.png", pointVideo.x-27, pointVideo.y-20, 50, 50);
+        var printImage = r.image("img/print.png", pointPrint.x-27, pointPrint.y-20, 50, 50);
         var imagesSet = r.set(photoImage, webImage, videoImage, printImage).click(function(){
-            scrollTo();zoomOut();
-            $("path").fadeOut();
-            $(".infoTitle, .switched").fadeOut(); 
+            scrollTo();
+            $("path, .infoTitle, .switched").fadeOut();
+            
             createPointAndTexts();
             
         })
@@ -264,7 +263,8 @@ Raphael(function () {
 function createPointAndTexts(){
 
      immergedSet.attr(immergedPointStyle);
-     alwaysOnSet.glow({color:"white"})
+     alwaysOnSet.glow({color:"white"});
+     immergedSet.glow({color:"white"})
     if (idCreated > 0) {
        $("circle[data-created="+idCreated-1+"]").remove();
        $("text[data-created="+idCreated-1+"]").remove();    
@@ -276,22 +276,12 @@ function createPointAndTexts(){
                 
             }else{
                if (allPointsArray[i].show == "show") {
-                if (allPointsArray[i].solo =="solo") {
-                    var text = r.text(allPointsArray[i].x,allPointsArray[i].y+30, allPointsArray[i].title).attr(visibleFont).hide()
-                    var circle = r.circle(allPointsArray[i].x, allPointsArray[i].y, radius).attr(alwaysOnStyle);
-                    circle.glow({color:"white"})
-                    alwaysOnSet.push(circle);
-                    
-
-                }else{
+                
+                
                     var text = r.text(allPointsArray[i].x,allPointsArray[i].y+30, allPointsArray[i].title).attr(font).hide();
                     var circle = r.circle(allPointsArray[i].x, allPointsArray[i].y, radius).attr(immergedPointStyle);
                     immergedSet.push(circle);
-                }
-                   
-                   allPointsSet.push(circle)
-                   allPointsSet.push(text);
-                   allTextsSet.push(text);
+                
 
                    circle.node.setAttribute("data-id",i);
                    circle.node.setAttribute("info", allPointsArray[i].info)
@@ -300,6 +290,10 @@ function createPointAndTexts(){
                    text.node.setAttribute('class','infoTitle');
                    text.node.setAttribute("text-id",i)
                    
+                   allPointsSet.push(circle)
+                   allPointsSet.push(text);
+                   allTextsSet.push(text);
+                   circle.glow({color:"white"})  
                }else{
                    var circle = r.circle(allPointsArray[i].x, allPointsArray[i].y, radius).attr(immergedPointStyle).hide();
                    var text = r.text(allPointsArray[i].x,allPointsArray[i].y+30, allPointsArray[i].title).attr(font).hide();
@@ -309,19 +303,21 @@ function createPointAndTexts(){
                };
                
 
-            }        
+            }  
+                 
          };
 
                 idCreated++; 
 
  }        
 
-       
+   // console.log(competences)
         
 createPointAndTexts();
 circleHover();
 circleClick();
-boxClose()
+boxClose();
+profilHoverPoints();
 
 function showInfo(title, left, top){
     var info = $("#"+title);
@@ -330,7 +326,7 @@ function showInfo(title, left, top){
     info.insertAfter(before)
 
     info.css({"left":left-65, "top": top+15})
- 
+    $("article").not("#"+title).fadeOut()
 
 }
 //Show title on hover
@@ -363,8 +359,9 @@ function circleClick(){
         var top = $("circle[data-id="+ $(this).attr("data-id")+"]").attr("cy"); 
         top = parseInt(top);
         left = parseInt(left);
+
         showInfo(info,left, top);
-})        
+    })        
 }
 
 
@@ -374,28 +371,41 @@ function scrollTo(){
      
 }
 
-function zoomOut(){
+function profilHoverPoints(){
+    
+    $("#profils li").mouseover(function(){
+        //fade out previous infos
+        $(".toFadeOut").fadeOut();
+        //make points white on each hover
+        $('.profilHovered').each(function() {
+                r.getById(this.raphaelid).animate({fill: "#fff", r: radius});
+        });
+        //add class to fade out next time mouseover
+        $(".profilHoveredText").each(function(i){  
+            $(".profilHoveredText").attr('class',"toFadeOut");
 
-    $("body").css({
-        "transform": "scale("+1.3+")",
-        "-webkit-animation-fill-mode": "forwards",
-        "animation-fill-mode": "forwards",
-        "transition": "2s"
+        })
+
+        var profilNom = $(this).children().attr("profil-id");
+        var nomCompetences = competences[profilNom][0].competences; 
+
+        for (var i = allPointsSet.length - 1; i >= 0; i--) {      
+           for (var j = nomCompetences.length - 1; j >= 0; j--) {  
+               var circleInfo = allPointsSet[i].node.getAttribute("info"); 
+               if (nomCompetences[j] == circleInfo) {
+                    allPointsSet[i].attr({fill: "#fff", r: radius})
+                            .stop().animate({fill: "yellow", r: radius }, 200);
+                    allPointsSet[i].node.setAttribute("class","profilHovered");
+                    allPointsSet[i+1].node.setAttribute("class" ,"profilHoveredText");
+                    allPointsSet[i+1].show().animate({"font-size":15 }, 200);                       
+               }
+           };          
+        };
     });
-    setTimeout(zoomIn(), 500)
-    
-    
-   
-}      
-function zoomIn(){
-    console.log('zoomin');
-    $("body").css({
-        "transform": "scale("+1+")",
-        "-webkit-animation-fill-mode": "forwards",
-        "animation-fill-mode": "forwards",
-        "transition": "2s"
-    })
 }
+
+
+
        
 });
 
