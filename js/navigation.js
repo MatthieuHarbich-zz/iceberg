@@ -118,7 +118,7 @@ var template_profilDesc = 				"<h1>{{name}}<span class=\"age\">({{age}})</span><
 										"<h2>Hobby</h2><p>{{hobby}}</p>" +
 										"<h2>Rôle</h2><p>{{r\u00f4le}}</p>" +
 										"{{#famille}}<h2>Famille</h2><p>{{famille}}</p>{{/famille}}" +
-										"<p>{{#skillsperso}}<span class=\"skillsList\"> {{skillTag}}</span>{{/skillsperso}}</p>";
+										"<p>{{#skillsperso}}<span class=\"skillsList\"> {{skillTag}} </span>{{/skillsperso}}</p>";
 										
 
 var html = Mustache.to_html(template_profilDesc, data);

@@ -6,6 +6,7 @@ html {
     line-height: 1.4;
 }
 
+
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -217,18 +218,11 @@ textarea {
 
 
 
-            .profilDesc p:last-child{
-                margin-top: 15px;
-                border-top: solid 1px;
-                padding-top: 5px;
-            }
+        
             
          
 
-            .profilDesc .skillsList:not(:first-child) {
-                margin-left: 15px;
-
-            }
+            
 
             
             #profils{
