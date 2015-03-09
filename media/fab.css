@@ -116,7 +116,9 @@ nav {
 	background-image: url("noisy.png");
 	overflow: auto;
 	zoom:1;
-	position: relative;
+	position: fixed;
+	top:15%;
+	left:8%;
 
 }
 

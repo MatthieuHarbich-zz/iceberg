@@ -373,6 +373,7 @@ function scrollTo(){
     $('html, body').animate({scrollTop: to.offset().top -200}, 2000);
      
 }
+
 function zoomOut(){
 
     $("body").css({
