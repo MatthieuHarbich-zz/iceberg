@@ -150,7 +150,7 @@ var html = Mustache.to_html(template_profilPicture, data_profil);
 $('.profilPicture').html(html);
 
 var template_profilMov = 		"<div class=\"js-video [vimeo, widescreen]\">"+
-								"<iframe src=\"https://player.vimeo.com/video/51365855?color=ffffff&title=0&byline=0&portrait=0\" width=\"100%\" height=\"auto\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>" +
+								'<iframe src="https://player.vimeo.com/video/121789616?autoplay=1&title=0&byline=0&portrait=0" width="100%"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' +
 								"</div>";
 var html = Mustache.to_html(template_profilMov, data_profil);
 $('.profilMov').html(html);

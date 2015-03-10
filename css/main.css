@@ -398,16 +398,18 @@ textarea {
                 width:38%;
                 background-color: red;
                 height:300px;
-                float:right;
+                float:left;
+
 
             }
 
             .journalPhotos{
                 width:38%;
+                float:right;
                 background-color: green;
                 height:250px;
                 margin-top:20px;
-                float:right;
+                float:left;
             }
 
             .journalVideo iframe{
@@ -461,6 +463,7 @@ textarea {
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
+                /*float:left;*/
             }
 
             
@@ -488,14 +491,19 @@ textarea {
             }
             
             .journalText{
-                
-                /*overflow:scroll;*/
+                max-height: 500px;
+                overflow:scroll;
+                overflow-x:hidden; 
             }
 
             .accordion span{
                 font-weight: bold;
             }
-
+            
+            .journalNav{
+                width:60%;
+                float:left; 
+            }
             
 
 
