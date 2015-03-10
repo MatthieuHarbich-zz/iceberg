@@ -227,6 +227,18 @@ nav {
 
 }
 
+.bottomDive{
+	clear: both;
+	z-index: 999;
+	float: left;
+	width: 100%;
+	text-align: center;
+	bottom: -10px;
+
+}
+
+
+
 .close {
   color: #ffffff;
   background: #3498db;
@@ -244,7 +256,7 @@ nav {
 
 
 .profilMov{
-	width: 40%;
+	width: 35%;
 	min-width: 300px;
 }
 

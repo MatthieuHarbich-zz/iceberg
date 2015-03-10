@@ -4,7 +4,6 @@ $("#profilContent").hide();
 $("#formationContent").hide();
 
 
-
 var data = $.getJSON('datas/profils.json', function(json) {
 	    data = json;
 });
@@ -21,12 +20,17 @@ $( ".open" ).hover(
 );
 
 
+$(".diveWithMe").click(function() {
+	$(".hide").empty();
+	$("#profilContent").hide();
+});
+
+
 $(".open").click(function() {
 	var key = $(this).attr("data-nav");
 	var size = data.length;
 	showContent(key, data);
 	setPrevNext(key, size, data);
-
 });
 
 $(".prev").click(function() {
