@@ -1,4 +1,50 @@
 @font-face {
+    font-family: 'edmondsansbold';
+    src: url('../fonts/Edmondsans-Bold-webfont.eot');
+    src: url('../fonts/Edmondsans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Edmondsans-Bold-webfont.woff2') format('woff2'),
+         url('../fonts/Edmondsans-Bold-webfont.woff') format('woff'),
+         url('../fonts/Edmondsans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Edmondsans-Bold-webfont.svg#edmondsansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'edmondsansmedium';
+    src: url('../fonts/Edmondsans-Medium-webfont.eot');
+    src: url('../fonts/Edmondsans-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Edmondsans-Medium-webfont.woff2') format('woff2'),
+         url('../fonts/Edmondsans-Medium-webfont.woff') format('woff'),
+         url('../fonts/Edmondsans-Medium-webfont.ttf') format('truetype'),
+         url('../fonts/Edmondsans-Medium-webfont.svg#edmondsansmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'edmondsans_regularregular';
+    src: url('../fonts/Edmondsans-Regular-webfont.eot');
+    src: url('../fonts/Edmondsans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Edmondsans-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Edmondsans-Regular-webfont.woff') format('woff'),
+         url('../fonts/Edmondsans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Edmondsans-Regular-webfont.svg#edmondsans_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon.eot?ux2aez');
 	src:url('../fonts/icomoon.eot?#iefixux2aez') format('embedded-opentype'),
@@ -43,6 +89,41 @@
 	
 }
 
+
+p {
+	font-family: 'edmondsans_regularregular', sans-serif;
+	color: #0e3852;
+}
+
+.profilDesc h2{
+	margin-top: 10px;
+	font-size: 1.2em;
+	font-weight: medium;
+
+}
+
+
+.profilDesc p:last-child{
+                margin-top: 15px;
+                border-top: solid 1px #dedede;
+                padding-top: 5px;
+            }
+
+.skillsList {
+	text-align: center;
+	background-color: #eee;
+	padding: 5px;
+	border: 1px solid #ddd;
+	line-height: 2.2em;
+	display: inline;
+	color: #3489BE;
+	
+}
+
+.profilDesc .skillsList:not(:first-child) {
+                margin-left: 15px;
+
+            }
 
 
 
