@@ -7,30 +7,31 @@
     "skills": [
       {
         "skillsName": "Photo",
-        "value": "34"
+        "value": "100"
       },
       {
         "skillsName": "Movie",
-        "value": "33"
+        "value": "80"
       },
       {
         "skillsName": "Code",
-        "value": "40"
+        "value": "90"
       },
       {
         "skillsName": "Print",
-        "value": "12"
+        "value": "70"
       }
     ],
     "age": "27",
     "background": "concepteur multim\u00e9dia",
     "hobby": "multim\u00e9dia, voyage",
     "skillsperso": [ 
-      {"skillTag": "jQuery"},
-      {"skillTag": "HTML5/CSS"},
-      {"skillTag": "motion design"},
-      {"skillTag": "UI/UX"},
-      {"skillTag": "PHP"}
+      {"skillTag": "Photographie"},
+      {"skillTag": "HTML5 / CSS & jQuery"},
+      {"skillTag": "Project Management"},
+      {"skillTag": "Motion Design"},
+      {"skillTag": "AI / PS / INDD"}
+      
      
     ],
     "r\u00f4le": "responsable frontend, assistant chef de projet"
@@ -90,19 +91,19 @@
     "skills": [
       {
         "skillsName": "Photo",
-        "value": "34"
+        "value": "70"
       },
       {
         "skillsName": "Movie",
-        "value": "33"
+        "value": "35"
       },
       {
         "skillsName": "Code",
-        "value": "40"
+        "value": "65"
       },
       {
         "skillsName": "Print",
-        "value": "12"
+        "value": "80"
       }
     ],
     "age": "variable",
@@ -113,16 +114,16 @@
         "skillTag": "UX/UI"
       },
       {
-        "skillTag": "Photoshop"
+        "skillTag": "PS/AI/INDD"
       },
       {
-        "skillTag": "Illustrator"
+        "skillTag": "Cuisine"
       },
       {
         "skillTag": "Print"
       },
       {
-        "skillTag": ""
+        "skillTag": "Rédaction"
       }
     ],
     "r\u00f4le": "corporate desginer, r\u00e9dacteur"
