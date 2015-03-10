@@ -55,6 +55,20 @@
 	font-style: normal;
 }
 
+
+@font-face {
+	font-family:'AgilitaLTPro-BoldCond';
+	src: url('AgilitaLTPro-BoldCond_gdi.eot');
+	src: url('AgilitaLTPro-BoldCond_gdi.eot?#iefix') format('embedded-opentype'),
+		url('AgilitaLTPro-BoldCond_gdi.woff') format('woff'),
+		url('AgilitaLTPro-BoldCond_gdi.ttf') format('truetype'),
+		url('AgilitaLTPro-BoldCond_gdi.svg#AgilitaLTPro-BoldCond') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: condensed;
+	unicode-range: U+0-10FFFF;
+}
+
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
@@ -85,10 +99,70 @@
 	content: "\e603";
 }
 
-#previousProfil{
-	
+.icon-i-navLeft:before {
+	content: "\e604";
 }
 
+.icon-i-navRight:before {
+	content: "\e605";
+}
+
+.icon-close_modal:before {
+	content: "\e606";
+}
+
+
+
+.h1ico {
+	margin-right: 0.2em;
+}
+
+.next{
+	color:#0e3852;
+	font-size: 2em;
+	text-decoration: none;
+	margin-right: -15px;
+} 
+
+.prev{
+	color:#0e3852;
+	font-size: 2em;
+	text-decoration: none;
+	margin-left: -15px;
+} 
+
+.prev:hover, .next:hover {
+	color: #3C6983;
+}
+
+
+.profilDesc h1{
+	margin-top: 0px;
+}
+
+.formationTitle h1{
+	margin-top: 0px;
+	margin: .5em 0;
+	color: #0e3852;
+
+}
+
+.bottomClose{
+	color:  #0e3852;
+	font-size: 2.4em;
+	margin-bottom: -50px;
+
+}
+
+h1 {
+	font-family: 'AgilitaLTPro-BoldCond', sans-serif;
+	color: #0e3852;
+}
+
+h2 {
+	font-family: 'AgilitaLTPro-BoldCond', sans-serif;
+	color: #0e3852;
+}
 
 p {
 	font-family: 'edmondsans_regularregular', sans-serif;
@@ -102,6 +176,18 @@ p {
 
 }
 
+.diveWithMe{
+	color: white;
+	font-family: 'edmondsans_regularregular';
+
+}
+
+
+.centerDive{
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .profilDesc p:last-child{
                 margin-top: 15px;
@@ -114,9 +200,10 @@ p {
 	background-color: #eee;
 	padding: 5px;
 	border: 1px solid #ddd;
-	line-height: 2.2em;
+	line-height: 2.5em;
 	display: inline;
 	color: #3489BE;
+	font-size: 0.8em;
 	
 }
 
@@ -127,28 +214,38 @@ p {
 
 
 
+/**Formation**/
+
 .formationDesc{
-	width: 30%;
+	width: 70%;
 }
 
 .formationMedia{
 	width: auto;
+	float: left;
 }
 
 
 /**GallerieNavigation**/
 
 .navProfil{
-	display: block;
+	
   	position: absolute;
-  	top: 33%;
+
 
 }
 
-.navProfil img{
-	width: 50%;
-	height: 50%;
-	cursor: pointer;
+.navProfilControl{
+	
+	
+
+	vertical-align:middle;
+	display:inline-block;
+	display:inline; /* correctif inline-block */
+	line-height:1.2; /* on rétablit le line-height */
+	text-align:left; /* ... et l'alignement du texte */ 
+
+
 }
 
 
@@ -188,18 +285,34 @@ nav {
 #profilContent{display: none;}
 #formationContent{display: none;}
 
+
+ .columns{
+			-webkit-columns: 2;
+			-moz-columns: 2;
+			columns: 2;
+}
+
+ .columns p{
+			margin-bottom: 15px;
+}
+
+ .columns p:last-child{
+			margin-bottom: 0px;
+}
+
+
+
 .content {
-	margin-top: 10px;
 	margin-right: auto;
 	margin-left: auto;
 	width: 80%;
-	padding: 15px 50px;
+	padding: 1% 3%;
 	background-image: url("noisy.png");
-	overflow: auto;
+	/*overflow: auto;*/
 	zoom:1;
 	position: fixed;
 	top:15%;
-	left:8%;
+	left:7%;
 
 }
 
@@ -216,24 +329,45 @@ nav {
 
 .bottomClose{
 	clear: both;
-	position: absolute;
 	z-index: 999;
 	float: left;
 	width: 100%;
-	color: red;
+	text-align: center;
+	bottom: 0px;
 
+}
+
+.close {
+  text-decoration: none;
+  border: none;
+}
+
+
+.bottomDive{
+	clear: both;
+	z-index: 999;
+	float: left;
+	width: 100%;
 	text-align: center;
 	bottom: -10px;
 
 }
 
-.close {
-  color: #ffffff;
-  background: #3498db;
-  padding: 5px 5px 5px 5px;
-  text-decoration: none;
-  border: none;
+.diveWithMe{
+	background-image:url('../img/diveWithMe.png');
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 37px;
+	margin-bottom: -40px;
+
 }
+
+.diveWithMe:hover{
+	cursor: pointer;
+	
+}
+
+
 
 
 
@@ -244,7 +378,7 @@ nav {
 
 
 .profilMov{
-	width: 40%;
+	width: 35%;
 	min-width: 300px;
 }
 
@@ -266,9 +400,7 @@ nav {
 }
 
 
-.profilDesc h1{
-	margin-top: 0px;
-}
+
 
 
 .shortDesc p{

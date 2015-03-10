@@ -28,37 +28,49 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
+<button class="openFormation" data-nav="0">Formation-1</button>
+<button class="openFormation" data-nav="1">Formation-1</button>
+<button class="openFormation" data-nav="2">Formation-1</button>
+<button class="openFormation" data-nav="3">Formation-1</button>
             
             <div id="profilContent" class="mainContent">
                 <div class="content">
                     <div class="navProfilControl">
-                        <a href="#" id="previousProfil" class="navProfil prev"><img src="media/navLeft.png" ></a>
-                        <a href="#" id="nextProfil" class="navProfil next"><img src="media/navRight.png" ></a>
+                        <a href="#" id="previousProfil" class="navProfil prev icon-i-navLeft"></a>
+                        <a href="#" id="nextProfil" class="navProfil next icon-i-navRight"></a>
                     </div>
 
                     <div class="profilSkills col-1 hide"></div>
                     <div class="profilPicture col-1 hide"></div>
                     <div class="profilDesc col-1 hide"></div>  
-                    <div class="profilMov col-1 hide"></div>   
+                    <div class="profilMov col-1 hide"></div> 
+                    <div class="centerDive">
+                     <div class="bottomDive diveWithMe">
+                       dive with me !
+                    </div> 
+                    </div>       
                  </div>
-                    <div class="bottomClose">
-                        <button class="close">Dive with me !</button>
-                    </div>          
              </div>
 
-             <div class="skillsSample"></div>
+             <div id="skillsSample">
+                 <div class="content">
+                     <div class="profilSkillsQuickShow col-1 hide"></div>
+                 </div>
+
+             </div>
 
 
-                 <div id="formationContent" class="mainContent"> 
+            <div id="formationContent" class="mainContent"> 
                 <div class="content">
                     <div class="formationTitle hide"></div>
-                    <div class="formationDesc col-1 hide"></div>
-                    <div class="formationMedia col-1 hide"></div>  
+                    <div class="formationDesc columns col-1 hide"></div>
+                    <div class="formationMedia col-1 hide"></div> 
+
+                        <div class="bottomClose">
+                            <span class="close icon-close_modal"></span>
+                        </div>     
                  </div>
-                    <div class="bottomClose">
-                        <button class="close">X</button>
-                    </div>          
+                          
              </div>
             
 <div id="gradTop"></div>
@@ -69,17 +81,17 @@
         </div>
         <ul id="profils">
 
-            <li class="open" data-nav="0"><img src="layers/profils/fabrice.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="1"><img src="layers/profils/naty.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="2"><img src="layers/profils/quentin.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="3"><img src="layers/profils/clelia.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="4"><img src="layers/profils/richard.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="5"><img src="layers/profils/matthieu.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="6"><img src="layers/profils/romain.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="7"><img src="layers/profils/laurent.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="8"><img src="layers/profils/anthony.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="9"><img src="layers/profils/maya.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
-            <li class="open" data-nav="10"><img src="layers/profils/adam.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="0"><img src="layers/profils/fabrice.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="1"><img src="layers/profils/naty.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="2"><img src="layers/profils/quentin.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="3"><img src="layers/profils/clelia.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="4"><img src="layers/profils/richard.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="5"><img src="layers/profils/matthieu.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="6"><img src="layers/profils/romain.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="7"><img src="layers/profils/laurent.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="8"><img src="layers/profils/anthony.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="9"><img src="layers/profils/maya.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
+            <li class="openProfil" data-nav="10"><img src="layers/profils/adam.png" class="profil"><img src="layers/eye.png" class="hidden eye"></li>
 
         </ul>
 
@@ -555,6 +567,7 @@
         <script src="js/jqueryLoadTemplate.js"></script>
         <script src="js/mustache.js"></script>
         <script src="js/navigation.js"></script>
+         <script src="js/navigationContentFormation.js"></script>
 
         <!--<script src="js/fab.js"></script>-->
         <!--<script src="js/fab_content.js"></script>-->

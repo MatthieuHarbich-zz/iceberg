@@ -371,6 +371,8 @@ function scrollTo(){
      
 }
 
+/*
+
 function profilHoverPoints(){
     
     $("#profils li").mouseover(function(){
@@ -403,7 +405,7 @@ function profilHoverPoints(){
         };
     });
 }
-
+*/
 
 
        

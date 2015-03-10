@@ -2,93 +2,114 @@ $(document).ready(function() {
 
 $("#profilContent").hide();
 $("#formationContent").hide();
+$("#skillsSample").hide();
 
 
+var data_profil = $.getJSON('datas/profils.json', function(json) {
+	    data_profil = json;
+});
 
-var data = $.getJSON('datas/profils.json', function(json) {
-	    data = json;
+//var data_profils = data_profil;
+
+/**
+$( ".open" ).hover(function() {
+  	var key = $(this).attr("data_profil-nav");
+  	console.log(key);
+  	$("#skillsSample").show();
+    //toTemplateSkills(data_profil, key);
+    data_profil = data_profils[key]; 
+	var template_profilSampleQuickShow = "{{#skills}}<div class=\"skills\">" +
+							"<div class=\"skillsName\"><span class=\"icon-i-{{skillsName}} + \"></div>"+
+							"<div class=\"skillSet\">" +
+                            "<div class=\"skill\" style=\"width:{{value}}px\"></div>" +
+                            "</div>" +
+                            "</div>{{/skills}}";
+	var html = Mustache.to_html(template_profilSampleQuickShow, data_profil);
+	$('.profilSampleQuickShow').html(html);
+
+  }, function() {
+  	$("#skillsSample").hide();
+  	
+  }
+);
+**/
+
+$(".diveWithMe").click(function() {
+	$(".hide").empty();
+	$("#profilContent").hide();
 });
 
 
-$( ".open" ).hover(
-  function() {
-  	var key = $(this).attr("data-nav");
-    toTemplateSkills(data, key);
-    console.log("hfadskfjha" + key);
-  }, function() {
-    $(".skillsSample").empty();
-  }
-);
+$(".openProfil").click(function() {
+	$("#formationContent").hide();
+	$("#profilContent").hide();
 
-
-$(".open").click(function() {
 	var key = $(this).attr("data-nav");
-	var size = data.length;
-	showContent(key, data);
-	setPrevNext(key, size, data);
-
+	var size = data_profil.length;
+	showContentProfil(key, data_profil);
+	setPrevNext(key, size, data_profil);
 });
 
 $(".prev").click(function() {
-	//console.log("prev");
+	$(".hide").empty();
+	$("#formationContent").hide();
 	var key = $(this).attr("data-nav");
-	var size = data.length;
-	setPrevNext(key, size, data);
-	showContent(key, data);
+	var size = data_profil.length;
+	setPrevNext(key, size, data_profil);
+	showContentProfil(key, data_profil);
 });
 
 
 $(".next").click(function() {
+	$(".hide").empty();
+	$("#formationContent").hide();
 	var key = $(this).attr("data-nav");
-	var size = data.length;
-	setPrevNext(key, size, data);
-	showContent(key, data);
+	var size = data_profil.length;
+	setPrevNext(key, size, data_profil);
+	showContentProfil(key, data_profil);
 });
 });
 
 
-function showContent(key, data){
+function showContentProfil(key, data_profil){
 	var key = key;
 
 	$(".hide").empty();
-	//$("#nextProfil").attr('data-nav', key);
+	//$("#nextProfil").attr('data_profil-nav', key);
+	$("#formationContent").hide();
 	$("#profilContent").show();
-	
-
-	toTemplate(data, key);
+	toTemplateProfils(data_profil, key);
 
 };
 
 
-function setPrevNext(key, size, data){
+function setPrevNext(key, size, data_profil){
 	var key = key;
 	var size = size;
-	var data = data;
-	console.log("fas" + data);
+	var data_profil = data_profil;
 
 	if (key == (size -1)) {
 
-		$(".prev").attr('data-nav', key - 1);
-		$(".next").attr('data-nav', 0 );
+		$(".prev").attr("data-nav", key - 1);
+		$(".next").attr("data-nav", 0 );
 
 	} else if (key == 0) {
 
-		$(".prev").attr('data-nav', (size - 1));
-		$(".next").attr('data-nav', ((key*1)+1));
+		$(".prev").attr("data-nav", (size - 1));
+		$(".next").attr("data-nav", ((key*1)+1));
 
 
 	} else {
 
-		$(".prev").attr('data-nav', (key - 1));
-		$(".next").attr('data-nav', ((key*1)+1) );
+		$(".prev").attr("data-nav", (key - 1));
+		$(".next").attr("data-nav", ((key*1)+1) );
 
 	};
 
-	$( ".open").removeClass('selected');
-	$( ".open[data-nav*='" + key + "']" ).addClass('selected');
+	$( ".openProfil").removeClass('selected');
+	$( ".openProfil[data-nav*='" + key + "']" ).addClass('selected');
 
-
-	$( ".close").attr('data-name', data[key].btn_name);
+	$( ".diveWithMe").attr('data-name', data_profil[key].btn_name);
 
 
 };
@@ -97,11 +118,10 @@ function setPrevNext(key, size, data){
 
 
 /**TEMPLATES**/
-function toTemplate(data, key) {
+function toTemplateProfils(data_profil, key) {
 
-	console.log(data[key]);
 
-	data = data[key];
+	data_profil = data_profil[key];
 
 var template_profilSkills = 		"{{#skills}}<div class=\"skills\">" +
 							"<div class=\"skillsName\"><span class=\"icon-i-{{skillsName}} + \"></div>"+
@@ -110,7 +130,7 @@ var template_profilSkills = 		"{{#skills}}<div class=\"skills\">" +
                             "</div>" +
                             "</div>{{/skills}}";
 
-var html = Mustache.to_html(template_profilSkills, data);
+var html = Mustache.to_html(template_profilSkills, data_profil);
 $('.profilSkills').html(html);
 
 var template_profilDesc = 				"<h1>{{name}}<span class=\"age\">({{age}})</span></h1>" +
@@ -121,33 +141,24 @@ var template_profilDesc = 				"<h1>{{name}}<span class=\"age\">({{age}})</span><
 										"<p>{{#skillsperso}}<span class=\"skillsList\"> {{skillTag}} </span>{{/skillsperso}}</p>";
 										
 
-var html = Mustache.to_html(template_profilDesc, data);
+var html = Mustache.to_html(template_profilDesc, data_profil);
 $('.profilDesc').html(html);
 
 var template_profilPicture = 		"<img src=\"img/{{btn_name}}.jpg\"/>";
 
-var html = Mustache.to_html(template_profilPicture, data);
+var html = Mustache.to_html(template_profilPicture, data_profil);
 $('.profilPicture').html(html);
 
 var template_profilMov = 		"<div class=\"js-video [vimeo, widescreen]\">"+
 								"<iframe src=\"https://player.vimeo.com/video/51365855?color=ffffff&title=0&byline=0&portrait=0\" width=\"100%\" height=\"auto\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>" +
 								"</div>";
-var html = Mustache.to_html(template_profilMov, data);
+var html = Mustache.to_html(template_profilMov, data_profil);
 $('.profilMov').html(html);
 
 };
 
-function toTemplateSkills (data, key){
-
-var template_profilSample = "{{#skills}}<div class=\"skills\">" +
-							"<div class=\"skillsName\"><span class=\"icon-i-{{skillsName}} + \"></div>"+
-							"<div class=\"skillSet\">" +
-                            "<div class=\"skill\" style=\"width:{{value}}px\"></div>" +
-                            "</div>" +
-                            "</div>{{/skills}}";
-
-var html = Mustache.to_html(template_profilSample, data);
-$('.skillsSample').html(html);
+function toTemplateSkills (data_profil, key){
+	
 };
 
 
