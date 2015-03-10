@@ -12,18 +12,20 @@ var data_formation = $.getJSON('datas/formation.json', function(json) {
 $(".openFormation").click(function() {
 	var key = $(this).attr("data-nav");
 	var size = data_formation.length;
-	showContent(key, data_formation);
+	showContentFormation(key, data_formation);
 });
 });
 
 $(".close").click(function() {
 	$("#formationContent").hide();
+	$("#profilContent").hide();
+
 });
 
 
 
 
-function showContent(key, data_formation){
+function showContentFormation(key, data_formation){
 	var key = key;
 
 	$(".hide").empty();
