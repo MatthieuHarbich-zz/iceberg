@@ -2,23 +2,37 @@ $(document).ready(function() {
 
 $("#profilContent").hide();
 $("#formationContent").hide();
+$("#skillsSample").hide();
 
 
 var data = $.getJSON('datas/profils.json', function(json) {
 	    data = json;
 });
 
+//var datas = data;
 
-$( ".open" ).hover(
-  function() {
+/**
+$( ".open" ).hover(function() {
   	var key = $(this).attr("data-nav");
-    toTemplateSkills(data, key);
-    console.log("hfadskfjha" + key);
+  	console.log(key);
+  	$("#skillsSample").show();
+    //toTemplateSkills(data, key);
+    data = datas[key]; 
+	var template_profilSampleQuickShow = "{{#skills}}<div class=\"skills\">" +
+							"<div class=\"skillsName\"><span class=\"icon-i-{{skillsName}} + \"></div>"+
+							"<div class=\"skillSet\">" +
+                            "<div class=\"skill\" style=\"width:{{value}}px\"></div>" +
+                            "</div>" +
+                            "</div>{{/skills}}";
+	var html = Mustache.to_html(template_profilSampleQuickShow, data);
+	$('.profilSampleQuickShow').html(html);
+
   }, function() {
-    $(".skillsSample").empty();
+  	$("#skillsSample").hide();
+  	
   }
 );
-
+**/
 
 $(".diveWithMe").click(function() {
 	$(".hide").empty();
@@ -26,15 +40,17 @@ $(".diveWithMe").click(function() {
 });
 
 
-$(".open").click(function() {
+$(".openProfil").click(function() {
+	$("#formationContent").hide();
+	$("#profilContent").hide();
+
 	var key = $(this).attr("data-nav");
 	var size = data.length;
-	showContent(key, data);
+	showContentProfil(key, data);
 	setPrevNext(key, size, data);
 });
 
 $(".prev").click(function() {
-	//console.log("prev");
 	var key = $(this).attr("data-nav");
 	var size = data.length;
 	setPrevNext(key, size, data);
@@ -51,7 +67,7 @@ $(".next").click(function() {
 });
 
 
-function showContent(key, data){
+function showContentProfil(key, data){
 	var key = key;
 
 	$(".hide").empty();
@@ -59,7 +75,7 @@ function showContent(key, data){
 	$("#profilContent").show();
 	
 
-	toTemplate(data, key);
+	toTemplateProfils(data, key);
 
 };
 
@@ -68,7 +84,6 @@ function setPrevNext(key, size, data){
 	var key = key;
 	var size = size;
 	var data = data;
-	console.log("fas" + data);
 
 	if (key == (size -1)) {
 
@@ -88,7 +103,7 @@ function setPrevNext(key, size, data){
 
 	};
 
-	$( ".open").removeClass('selected');
+	$( ".openProfil").removeClass('selected');
 	$( ".open[data-nav*='" + key + "']" ).addClass('selected');
 
 
@@ -101,9 +116,8 @@ function setPrevNext(key, size, data){
 
 
 /**TEMPLATES**/
-function toTemplate(data, key) {
+function toTemplateProfils(data, key) {
 
-	console.log(data[key]);
 
 	data = data[key];
 
@@ -142,16 +156,7 @@ $('.profilMov').html(html);
 };
 
 function toTemplateSkills (data, key){
-
-var template_profilSample = "{{#skills}}<div class=\"skills\">" +
-							"<div class=\"skillsName\"><span class=\"icon-i-{{skillsName}} + \"></div>"+
-							"<div class=\"skillSet\">" +
-                            "<div class=\"skill\" style=\"width:{{value}}px\"></div>" +
-                            "</div>" +
-                            "</div>{{/skills}}";
-
-var html = Mustache.to_html(template_profilSample, data);
-$('.skillsSample').html(html);
+	
 };
 
 

@@ -85,10 +85,26 @@
 	content: "\e603";
 }
 
+.h1ico {
+	margin-right: 0.2em;
+}
+
+
 #previousProfil{
 	
 }
 
+
+.profilDesc h1{
+	margin-top: 0px;
+}
+
+.formationTitle h1{
+	margin-top: 0px;
+	margin: .5em 0;
+	color: #0e3852;
+
+}
 
 p {
 	font-family: 'edmondsans_regularregular', sans-serif;
@@ -127,12 +143,15 @@ p {
 
 
 
+/**Formation**/
+
 .formationDesc{
-	width: 30%;
+	width: 70%;
 }
 
 .formationMedia{
 	width: auto;
+	float: left;
 }
 
 
@@ -188,6 +207,23 @@ nav {
 #profilContent{display: none;}
 #formationContent{display: none;}
 
+
+ .columns{
+			-webkit-columns: 2;
+			-moz-columns: 2;
+			columns: 2;
+}
+
+ .columns p{
+			margin-bottom: 15px;
+}
+
+ .columns p:last-child{
+			margin-bottom: 0px;
+}
+
+
+
 .content {
 	margin-top: 10px;
 	margin-right: auto;
@@ -223,7 +259,7 @@ nav {
 	color: red;
 
 	text-align: center;
-	bottom: -10px;
+	bottom: 0px;
 
 }
 
@@ -278,9 +314,7 @@ nav {
 }
 
 
-.profilDesc h1{
-	margin-top: 0px;
-}
+
 
 
 .shortDesc p{
