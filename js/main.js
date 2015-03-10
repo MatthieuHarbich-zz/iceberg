@@ -55,38 +55,28 @@ $(function(){
 
 	});
 	
-	var fade = true;
-	$(window).mousemove(function(e){
-		var top = e.clientY;
-		var windowHeight = $(window).height();
+	// var fade = true;
+	// $(window).mousemove(function(e){
+	// 	var top = e.clientY;
+	// 	var windowHeight = $(window).height();
 		 
-		var bottom = windowHeight - top;
+	// 	var bottom = windowHeight - top;
 	
-		if(bottom<40){
+	// 	if(bottom<40){
 			
-			$('.journalButtonDown').fadeIn();
-		}else{
-			$('.journalButtonDown').fadeOut();
-		}
+	// 		$('.journalButtonDown').fadeIn();
+	// 	}else{
+	// 		$('.journalButtonDown').fadeOut();
+	// 	}
 		 
 
 		
 
-	})
+	// })
 
 	$('#journalButton').on("click", function(){
 
-				setTimeout(function() {
-			      $('#journalButton').toggleClass('journalButtonDown');
-			     
-			      
-				}, 200);
-
-				setTimeout(function() {
-			     
-			      $('#journalButton').show();
-			      
-				}, 500);
+				
 				
 
 				$('#journalContainer').toggleClass("journalContentUp", 200, 'linear');
@@ -97,6 +87,56 @@ $(function(){
 
 				
 		})
+
+	$( ".accordion" ).accordion({
+	  active: 0,
+	  heightStyle: "content",
+	  collapsible: true
+	});
+
+	$('.journalContent[data-day = 1]').show();
+
+	$('.jour li').on('click', function(){
+
+		var day = $(this).attr('data-d');
+
+		console.log(day);
+
+		switch(day){
+			case "1":
+				console.log("1")
+				$('.journalContent').hide();
+				$('.journalContent[data-day = 1]').show();
+			break;
+			case "2":
+			console.log("2")
+				$('.journalContent').hide();
+				$('.journalContent[data-day = 2]').show();
+			break;
+			case "3":
+			console.log("3")
+				$('.journalContent').hide();
+				$('.journalContent[data-day = 3]').show();
+			break;
+			case "4":
+			console.log("4")
+				$('.journalContent').hide();
+				$('.journalContent[data-day = 4]').show();
+			break;
+			case "5":
+			console.log("<5></5>")
+				$('.journalContent').hide();
+				$('.journalContent[data-day = 5]').show();
+			break;
+
+
+		}
+	})
+	
+
+	
+	
+
 
 
 
