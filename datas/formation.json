@@ -2,8 +2,8 @@
 	{
 		"FormationName":"Site Internet",
 		"FormationDesc": [{"p":"On n’envisage plus notre quotidien sans internet. De nos jours, tout peut être accompli grâce à cet univers connecté: faire ses courses, planifier ses prochaines vacances au soleil, écouter de la musique, traquer ses colis en cours de livraison, regarder un chaton jouer du piano ou encore lire en avance le résumé du prochain épisode de Game of Thrones (Arya perd la vue)."} , {"p":"Mais dans les coulisses de cette merveille, une multitude de compétences se combinent pour délivrer environ 3 420 000 000 résultats d’une recherche Google en ~0,38 secondes… Chaque bouton, chaque animation, chaque choix de couleur, chaque fonctionnalité est le fruit d’intenses réflexions, voire de virulents débats, pour optimiser l’expérience finale de l’utilisateur."} ],
-		"FormationImage": ["imageName","imageName","imageName","imageName","imageName","imageName","imageName","imageName"],
-		"FormationVideo": "",
+		"FormationImage": [],
+		"FormationVideo": "121805580",
 		"ico":"Code"	
 		},
 	{
@@ -17,7 +17,7 @@
 		"FormationName":"Print",
 		"FormationDesc": [{"p":"Les paroles s’envolent, les écrits restent. Raison de plus pour que ce qui demeure soit parfait. Depuis un soir de 1452 à Mayence où le procédé de l’imprimerie moderne a vu le jour, l’attention du détail et l’harmonie typographique ont dicté les premiers principes de la création de produits imprimés. S’en est suivi, dans le milieu du graphisme, le même essor que celui qu’a connu la peinture pendant la renaissance avec des mouvements comme l’art-déco, le Bauhaus, le modernisme et tant d’autres, jusqu’au jour de l’apocalypse. En 1995, Microsoft dévoilait le Comic Sans MS, dessinée par Vincent Connarre - comme quoi les noms de famille sont parfois mérités."},{"p":"En ingénierie des médias, nous apprenons sur quels standards travaille l’industrie afin d’être capable de délivrer des documents conformes aux normes de production. Nous apprenons également à être créatifs et inventifs pour trouver des solutions originales en matière d’imprimés."}],
 		"FormationImage": [],
-		"FormationVideo": "LinkgName",
+		"FormationVideo": "",
 		"ico":"Print"	
 	},
 	{

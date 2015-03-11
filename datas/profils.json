@@ -4,6 +4,7 @@
     "profilPict": "mike.jpg",
     "name": "Fabrice Clerc",
     "btn_name": "fabrice",
+    "video":"121789126",
     "skills": [
       {
         "skillsName": "Photo",
@@ -42,6 +43,7 @@
     "profilPict": "natalie.jpg",
     "name": "Natalie Canonica",
      "btn_name": "natalie",
+     "video":"121789612",
     "skills": [
       {
         "skillsName": "Photo",
@@ -88,6 +90,7 @@
     "profilPict": "mike.jpg",
     "name": "Quentin de Lattre",
      "btn_name": "quentin",
+     "video":"121789616",
     "skills": [
       {
         "skillsName": "Photo",
@@ -133,6 +136,7 @@
     "profilPict": "clelia.jpg",
     "name": "Cl\u00e9lia Panchaud",
      "btn_name": "clelia",
+     "video":"121789124",
     "skills": [
       {
         "skillsName": "Photo",
@@ -178,6 +182,7 @@
     "profilPict": "mike.jpg",
     "name": "Richard Ammann",
      "btn_name": "richard",
+     "video":"121789617",
     "skills": [
       {
         "skillsName": "Photo",
@@ -223,6 +228,7 @@
     "profilPict": "mike.jpg",
     "name": "Matthieu Harbich",
      "btn_name": "matthieu",
+     "video":"121789608",
     "skills": [
       {
         "skillsName": "Photo",
@@ -268,6 +274,7 @@
     "profilPict": "mike.jpg",
     "name": "Romain Cerantola",
      "btn_name": "romain",
+     "video":"121789820",
     "skills": [
       {
         "skillsName": "Photo",
@@ -314,6 +321,7 @@
     "profilPict": "mike.jpg",
     "name": "Laurent Lienher",
      "btn_name": "laurent",
+     "video":"121789127",
     "skills": [
       {
         "skillsName": "Photo",
@@ -365,6 +373,7 @@
     "profilPict": "mike.jpg",
     "name": "Anthony Da Silva",
      "btn_name": "anthony",
+     "video":"121789122",
     "skills": [
       {
         "skillsName": "Photo",
@@ -411,6 +420,7 @@
     "profilPict": "mike.jpg",
     "name": "Maya Jeanmonod",
      "btn_name": "maya",
+     "video":"121789611",
     "skills": [
       {
         "skillsName": "Photo",
@@ -460,6 +470,7 @@
     "profilPict": "mike.jpg",
     "name": "Adam Gina",
      "btn_name": "adam",
+     "video":"121789121",
     "skills": [
       {
         "skillsName": "Photo",
