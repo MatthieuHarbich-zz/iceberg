@@ -412,7 +412,9 @@ textarea {
                 width:38%;
                 background-color: red;
                 height:300px;
-                float:left;
+                float:right;
+                position:relative;
+                top: -70px;
 
 
             }
@@ -423,7 +425,9 @@ textarea {
                 background-color: green;
                 height:250px;
                 margin-top:20px;
-                float:left;
+                float:right;
+                position:relative;
+                top: -80px;
             }
 
             .journalVideo iframe{
@@ -487,12 +491,22 @@ textarea {
                 margin: 0;
                 padding: 0;
                 width:19%;
-                color:grey;
+                color:#DEDEDE;
                 cursor: pointer;
                 display:inline-block;
             }
 
-            .jour li.active{
+            .jour h1{
+                color:#DEDEDE;
+            }
+
+            .jour h1:hover{
+                color:black;
+            }
+
+           
+
+            .jour li.active h1{
                 color:black;
             }
 

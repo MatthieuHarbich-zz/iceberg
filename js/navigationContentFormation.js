@@ -53,7 +53,7 @@ var html = Mustache.to_html(template_formationDesc, data_formation);
 $('.formationDesc').html(html);
 
 var template_formationMedia = 		"{{#FormationImage}}<img src=\"img/{{FormationImage}}\"/>{{/FormationImage}}" +
-									"<div class=\"formationMov\">{{FormationVideo}}</div>";
+									'{{#FormationVideo}}<div class=\"formationMov\"><iframe src="https://player.vimeo.com/video/{{FormationVideo}}?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>{{/FormationVideo}}';
 var html = Mustache.to_html(template_formationMedia, data_formation);
 $('.formationMedia').html(html);
 
