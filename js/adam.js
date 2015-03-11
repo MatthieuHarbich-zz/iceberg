@@ -1,11 +1,30 @@
 $(function(){
 
+var idleTime = 0;
+    //Increment the idle time counter every minute.
+  //  var idleInterval = setInterval(timerIncrement, 10000); // 1 minute
+
+    //Zero the idle timer on mouse movement.
+    $("*").mousemove(function (e) {
+        idleTime = 0;
+    });
+    $("*").keypress(function (e) {
+        idleTime = 0;
+    });
+
+// function timerIncrement() {
+//     idleTime = idleTime + 1;
+//     if (idleTime > 0.4) { 
+//         $("#bgStart").fadeIn();
+//     }
+// }
     Raphael.fn.line = function(startX, startY, endX, endY){
         return this.path('M' + startX + ' ' + startY + ' L' + endX + ' ' + endY).attr({"stroke": lineColor, 
            "stroke-width": 0.5, "stroke-dasharray":"."}).glow({width:1, color: "white"});
     };
 
     //CONSTANTS
+            var profilInfo;
             var idCreated = 0;
             var immergedPointStyle = {stroke: "none", fill: "#fff"};
             var alwaysOnStyle = {fill: "white",stroke: "none"}
@@ -22,11 +41,11 @@ $(function(){
             var font = {"font-size":5, "font-family":"Helvetica", "fill":"white"};
             var immergedFont = {"color": "white"};
         //MAIN POINTS & DESC
-            var pointPrint = {"type":"main", x:240, y:200,"title": "Print", "desc":"Thats so printy!"};
-            var pointVideo = {x: 100, y:280, "title":"Video","type":"main"};
-            var pointSite ={x:380, y:120, "type":"main", "title": "Site Web", "desc": "Tout le monde sait ce que c'est en gros, mais connaissez-vous toutes les démarches nécessaires à la mise en ligne d'un site web? Il y a beaucoup d'étapes cachées mais indispensables qui vous seront présentées" }
+            var pointPrint = {"type":"main", x:240, y:200,"title": "", "desc":"Thats so printy!"};
+            var pointVideo = {x: 100, y:280, "title":"","type":"main"};
+            var pointSite ={x:380, y:120, "type":"main", "title": "", "desc": "Tout le monde sait ce que c'est en gros, mais connaissez-vous toutes les démarches nécessaires à la mise en ligne d'un site web? Il y a beaucoup d'étapes cachées mais indispensables qui vous seront présentées" }
             var pointManagement = {x: 80, y:300, "type":"main", "title":""}
-            var pointPhoto = {x:450, y:270, "title":"Photo","type": "main", "desc":"c'est de la photo"}
+            var pointPhoto = {x:450, y:270, "title":"","type": "main", "desc":"c'est de la photo"}
             //not main
             var cercleTravel = {x:pointPhoto.x, y:pointPhoto.y, "title":"","type": "immerged"}
                 
@@ -224,15 +243,39 @@ Raphael(function () {
             "100%":      {cx: pointPrint.x, easing: "linear"}
         }, 1500)
     ;};
-   
+   var data_formation = $.getJSON('datas/formation.json', function(json) {
+        data_formation = json;
+
+});
+function openFormation() {
+    console.log('asd')
+    console.log(this.node)
+    var key = this.node.getAttribute("data-nav");
+    var size = data_formation.length;
+    showContentFormation(key, data_formation);
+}
+
+
 
     // SVG MAIN POINTS
         var photoImage = r.image("img/photo.png", pointPhoto.x-27, pointPhoto.y-20, 50, 50);
+                photoImage.node.setAttribute("data-nav",3);
+                photoImage.click(openFormation);
+
         var webImage = r.image("img/prog.png", pointSite.x-27, pointSite.y-25, 50, 50);
+                webImage.node.setAttribute("data-nav",0);
+                webImage.click(openFormation);
+
         var videoImage = r.image("img/video.png", pointVideo.x-27, pointVideo.y-20, 50, 50);
+                videoImage.node.setAttribute("data-nav",1);
+                videoImage.click(openFormation);
+
         var printImage = r.image("img/print.png", pointPrint.x-27, pointPrint.y-20, 50, 50);
+                printImage.node.setAttribute("data-nav",2);
+                printImage.click(openFormation);
+
         var imagesSet = r.set(photoImage, webImage, videoImage, printImage).click(function(){
-            scrollTo();
+                scrollTo()
             $("path, .infoTitle, .switched").fadeOut();
             
             createPointAndTexts();
@@ -317,7 +360,7 @@ createPointAndTexts();
 circleHover();
 circleClick();
 boxClose();
-profilHoverPoints();
+
 
 function showInfo(title, left, top){
     var info = $("#"+title);
@@ -338,8 +381,7 @@ function circleHover(){
   })
   .mouseout(function() {
       var element = $("text[text-id="+ $(this).attr("data-id")+"]" );
-
-      if (element.attr('class') != "switched") {
+      if (element.attr('class') != "switched" && element.attr("class") != "profilHoveredText toFadeOut") {
         element.fadeOut().animate({"font-size": "2px"},200);
       };
       var info = $("circle[data-id="+ $(this).attr("data-id")+"]").attr('info');
@@ -367,30 +409,30 @@ function circleClick(){
 
 function scrollTo(){
     var to =  $("circle[data-id=36]");
-    $('html, body').animate({scrollTop: to.offset().top -200}, 2000);
-     
+    $('html, body').animate({scrollTop: to.offset().top -200}, 2000); 
 }
 
-/*
+   
+$(".bottomDive.diveWithMe").click(function(){
+       
+        var profilNom = $(this).attr("data-name");
+        var nomCompetences = competences[profilNom][0].competences; 
 
-function profilHoverPoints(){
-    
-    $("#profils li").mouseover(function(){
         //fade out previous infos
-        $(".toFadeOut").fadeOut();
-        //make points white on each hover
+        if (profilInfo != profilNom) { 
+            $(".toFadeOut").hide();
+            $("text").attr('class','profilHoveredText switched');
+            
+        };
+
+        $("path, .switched, article").stop().fadeOut();
+        allPointsSet.attr({fill: "#fff"});
+
+        
         $('.profilHovered').each(function() {
                 r.getById(this.raphaelid).animate({fill: "#fff", r: radius});
         });
-        //add class to fade out next time mouseover
-        $(".profilHoveredText").each(function(i){  
-            $(".profilHoveredText").attr('class',"toFadeOut");
-
-        })
-
-        var profilNom = $(this).children().attr("profil-id");
-        var nomCompetences = competences[profilNom][0].competences; 
-
+    
         for (var i = allPointsSet.length - 1; i >= 0; i--) {      
            for (var j = nomCompetences.length - 1; j >= 0; j--) {  
                var circleInfo = allPointsSet[i].node.getAttribute("info"); 
@@ -398,15 +440,15 @@ function profilHoverPoints(){
                     allPointsSet[i].attr({fill: "#fff", r: radius})
                             .stop().animate({fill: "yellow", r: radius }, 200);
                     allPointsSet[i].node.setAttribute("class","profilHovered");
-                    allPointsSet[i+1].node.setAttribute("class" ,"profilHoveredText");
+                    allPointsSet[i+1].node.setAttribute("class" ,"profilHoveredText toFadeOut");
                     allPointsSet[i+1].show().animate({"font-size":15 }, 200);                       
                }
            };          
         };
-    });
-}
-*/
+        var profilInfo = profilNom;
 
+    });
+   
 
        
 });

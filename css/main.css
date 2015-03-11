@@ -165,8 +165,10 @@ textarea {
 
             #water1 img{
                 /*width:130%;*/
-                position:relative;
-                top:500px;
+                position:absolute;
+                top:-50px;
+                height:1570px;
+                width: 3000px;
                 left:-140px;
                 -webkit-animation-name:             waveir ; 
                 -webkit-animation-duration:         5s; 
@@ -174,7 +176,7 @@ textarea {
                 -webkit-transition-timing-function: linear;
             }
              #water2 img{
-                
+                height:1000px;
                 position:relative;
                 top:500px;
                 left:-140px;
@@ -184,9 +186,10 @@ textarea {
                 -webkit-transition-timing-function: linear;
             }
              #water3 img{
-
+                height:1000px;
                 position:relative;
                 top:500px;
+
                 left:-500px;
                 -webkit-animation-name:             waver ; 
                 -webkit-animation-duration:        5s; 
@@ -194,15 +197,7 @@ textarea {
                 -webkit-transition-timing-function: linear;
             }
             
-            #grad{
-                height:1000px;
-                width:100%;
-                background: url('../layers/gradient.png') bottom left repeat-x;
-                position:absolute;
-                top:600px;
-                z-index:2;
-                pointer-events: none;
-                
+              
             }
 
              #gradTop{
@@ -280,7 +275,7 @@ textarea {
             #bgStart{
                 background-color: rgba(31,59,77,0.7);
                 width:100%;
-                height:2000px;
+                height:800px;
                 position:fixed;
                 top:0;
                 left:0;
@@ -298,12 +293,31 @@ textarea {
 
 
             #footer{
-                height:130px;
+                height:100px;
                 width:100%;
-                background-color: rgb(37,63,96);
+       
                 position:absolute;
-                top: 1530px;
-                z-index:1300;
+                top: 1430px;
+                font-family: "Helvetica";
+                background-image: -webkit-gradient(
+                    linear,
+                    left top,
+                    left bottom,
+                    color-stop(0, #25516B),
+                    color-stop(1, #0B3245)
+                );
+                background-image: -o-linear-gradient(bottom, #25516B 0%, #0B3245 100%);
+                background-image: -moz-linear-gradient(bottom, #25516B 0%, #0B3245 100%);
+                background-image: -webkit-linear-gradient(bottom, #25516B 0%, #0B3245 100%);
+                background-image: -ms-linear-gradient(bottom, #25516B 0%, #0B3245 100%);
+                background-image: linear-gradient(to bottom, #25516B 0%, #0B3245 100%);          
+            }
+            #footer h1{
+                color: white;
+                opacity: 1.2;
+                font-size: 1em;
+                margin-left: 20px;
+                margin-top: 40px;
             }
 
             #holder{

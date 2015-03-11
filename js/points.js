@@ -28,13 +28,13 @@ var pointTraitement ={"info":"traitement","show":"show","type":"immerged", x:120
 var pointFormat ={"type":"immerged", x:275, y:560, "title": "Format", "desc":"rapport entre la hauteur et la largeur de la photo. Il existe plusieurs format utilisé de diverses manière suivant l'aspect que l’on souhaite donner a sa photographie."};
 
 var pointGP = {"info":"gestion","solo":"solo", "show":"show","type":"immerged", x: 70,y:600 ,"title": "Gestion de projet", "desc":"La gestion est présente partout. Pour entreprendre et mettre à bien chaque projet, que se soit une  vidéo, une affiche, un plan marketing, il faut avoir des notions de gestion de projet, ne serait-ce que pour finir ledit projet à temps. "};
-var pointPlanif = {"info":"planif","solo":"solo", "show":"show","type":"immerged", x:400 ,y: 758,"title": "Planification", "desc" :"Permet de planifier le projet dans le temps imparti. Il s’agit de planifier les ressources nécessaires pour réaliser les tâches"};
-var pointBusinessPlan = {"info":"businessPlan","solo":"solo", "show":"show","type":"immerged", x:120, y: 800 ,"title": "Business Plan", "desc":""};
+var pointPlanif = {"info":"planif","solo":"solo","type":"immerged", x:400 ,y: 758,"title": "Planification", "desc" :"Permet de planifier le projet dans le temps imparti. Il s’agit de planifier les ressources nécessaires pour réaliser les tâches"};
+var pointBusinessPlan = {"info":"businessPlan","solo":"solo","type":"immerged", x:120, y: 800 ,"title": "Business Plan", "desc":""};
 var pointMarketing ={"info":"marketing","solo":"solo", "show":"show","type":"immerged", x: 210,y:666 ,"title": "Marketing", "desc":""};
-var pointAnalyseMarche ={"info":"analyse","solo":"solo", "show":"show","type":"immerged", x:370 ,y:960 ,"title": "Analyse de marché", "desc":""};
+var pointAnalyseMarche ={"info":"analyse","solo":"solo","type":"immerged", x:370 ,y:960 ,"title": "Analyse de marché", "desc":""};
 var pointCommunication ={"info":"communication","solo":"solo", "show":"show","type":"immerged", x: 450,y: 450,"title": "Communication", "desc":""};
 var pointCompta ={"info":"compta","solo":"solo", "show":"show","type":"immerged", x: 250,y:500 ,"title": "Comptabilité", "desc":""};
-var pointStrategy ={"info":"strategie","solo":"solo", "show":"show","type":"immerged", x: 500,y: 638,"title": "Stratégie", "desc":""};
+var pointStrategy ={"info":"strategie","solo":"solo","type":"immerged", x: 500,y: 638,"title": "Stratégie", "desc":""};
 
 var pointEclairage = {x: 500, y: 400+200, "title":"Eclairage","type": "immerged","desc":"gestion de la lumière, les contrastes, exposition afin que l’éclairage soit en adéquation avec ce que l’on veut faire ressentir, exprimer. Utilisation d’outils tel que les flash, diffuseur et réflecteur."};
 var pointCadrage = {x:420, y:630, "title":"Cadrage","type": "immerged","desc":"choix artistique montrant une partie de la scène et en cachant une autre. il attire l’attention et met en valeur certain élément de la composition. À travers le cadrage, l'artiste décide de ce que le spectateur voit et ce qu'il ignore. Il peut ainsi faire jouer l'imagination du public et créer le doute, la crainte, la surprise."}
